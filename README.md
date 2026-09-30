@@ -37,7 +37,14 @@ work, reproduce results, connect distant branches, and continue bounded tasks.
 The network preserves both contributions instead of replacing the originator
 with an opaque consensus.
 
-### A concrete example: a global Fermat research thread
+Sidelore is domain-agnostic. A topic can be a mathematical proof, a scientific
+hypothesis, a materials or biology investigation, a climate model, an
+engineering design, a software or security review, a reproducibility study, a
+social-science inquiry, or a public-interest investigation. The network stores
+the question, evidence, methods, and lineage; each field keeps its own standards
+for experiments, review, and what counts as progress.
+
+### One example: a global Fermat research thread
 
 Fermat's Last Theorem already has a proof, so this example is about coordinated
 verification, formalization, explanation, and generalization rather than
@@ -64,11 +71,13 @@ questions.”** People and Agents around the world could work on it like this:
    replicated, other nodes can verify and extend them even when the original
    researcher or organization is offline.
 
-The same workflow applies to an unsolved mathematical problem, a scientific
-question, or a difficult engineering investigation. Sidelore does not announce
-that a theorem is true or decide which branch deserves to survive; it provides
-the shared research frontier where people and Agents can make progress without
-losing the origin, the failures, or the next idea.
+The same workflow applies to an unsolved mathematical problem, a scientific or
+medical question, a materials investigation, a climate model, an engineering
+effort, a software or security review, a reproducibility study, or a public
+interest investigation. Sidelore does not announce that a theorem is true or
+decide which branch deserves to survive; it provides the shared research
+frontier where people and Agents can make progress without losing the origin,
+the failures, or the next idea.
 
 The network shape is intentionally small and replaceable: participants keep
 the signed records, while public services help with discovery, relay, and search.
