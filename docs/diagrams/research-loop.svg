@@ -61,8 +61,8 @@
   <path d="M800 652C470 652 230 552 280 430" fill="none" stroke="#83e8d6" stroke-width="3" marker-end="url(#arrow)"/>
   <path d="M280 430C330 310 560 265 800 265" fill="none" stroke="#83e8d6" stroke-width="3" marker-end="url(#arrow)"/>
 
-  <g filter="url(#shadow)">
-    <circle cx="800" cy="445" r="135" fill="#102b42" stroke="url(#accent)" stroke-width="3"/>
+  <g>
+    <circle filter="url(#shadow)" cx="800" cy="445" r="135" fill="#102b42" stroke="url(#accent)" stroke-width="3"/>
     <circle cx="800" cy="445" r="112" fill="none" stroke="#80e6d4" stroke-opacity="0.2" stroke-width="1" stroke-dasharray="4 9"/>
     <text x="800" y="410" text-anchor="middle" class="sans kicker">TOPIC</text>
     <text x="800" y="450" text-anchor="middle" class="sans cardTitle" font-size="27">P vs NP</text>
@@ -70,8 +70,8 @@
     <text x="800" y="510" text-anchor="middle" class="sans micro">not a global claim of truth</text>
   </g>
 
-  <g filter="url(#shadow)">
-    <rect x="635" y="175" width="330" height="130" rx="22" fill="url(#card)" stroke="#5c9dc1" stroke-opacity="0.8"/>
+  <g>
+    <rect filter="url(#shadow)" x="635" y="175" width="330" height="130" rx="22" fill="url(#card)" stroke="#5c9dc1" stroke-opacity="0.8"/>
     <circle cx="680" cy="220" r="20" fill="#24516a" stroke="#83e8d6" stroke-width="2"/>
     <text x="680" y="226" text-anchor="middle" class="sans number">01</text>
     <text x="720" y="220" class="sans cardTitle">Precise subproblem</text>
@@ -79,8 +79,8 @@
     <text x="680" y="285" class="sans micro">Make the question inspectable</text>
   </g>
 
-  <g filter="url(#shadow)">
-    <rect x="80" y="365" width="330" height="130" rx="22" fill="url(#card)" stroke="#5c9dc1" stroke-opacity="0.8"/>
+  <g>
+    <rect filter="url(#shadow)" x="80" y="365" width="330" height="130" rx="22" fill="url(#card)" stroke="#5c9dc1" stroke-opacity="0.8"/>
     <circle cx="125" cy="410" r="20" fill="#24516a" stroke="#83e8d6" stroke-width="2"/>
     <text x="125" y="416" text-anchor="middle" class="sans number">02</text>
     <text x="165" y="410" class="sans cardTitle">Independent attempt</text>
@@ -88,8 +88,8 @@
     <text x="125" y="475" class="sans micro">Different nodes can repeat the work</text>
   </g>
 
-  <g filter="url(#shadow)">
-    <rect x="1190" y="365" width="330" height="130" rx="22" fill="url(#card)" stroke="#5c9dc1" stroke-opacity="0.8"/>
+  <g>
+    <rect filter="url(#shadow)" x="1190" y="365" width="330" height="130" rx="22" fill="url(#card)" stroke="#5c9dc1" stroke-opacity="0.8"/>
     <circle cx="1235" cy="410" r="20" fill="#24516a" stroke="#83e8d6" stroke-width="2"/>
     <text x="1235" y="416" text-anchor="middle" class="sans number">04</text>
     <text x="1275" y="410" class="sans cardTitle">Reproduction &amp; review</text>
@@ -97,17 +97,17 @@
     <text x="1235" y="475" class="sans micro">A review can challenge the branch</text>
   </g>
 
-  <g filter="url(#shadow)">
-    <rect x="635" y="610" width="330" height="130" rx="22" fill="#372b3b" stroke="#ce8b76" stroke-opacity="0.88"/>
+  <g>
+    <rect filter="url(#shadow)" x="635" y="610" width="330" height="130" rx="22" fill="#372b3b" stroke="#ce8b76" stroke-opacity="0.88"/>
     <circle cx="680" cy="655" r="20" fill="#684456" stroke="#f0b56c" stroke-width="2"/>
     <text x="680" y="661" text-anchor="middle" class="sans number">03</text>
-    <text x="720" y="655" class="sans cardTitle">Result or failure evidence</text>
-    <text x="680" y="695" class="sans cardText">What held · what broke · why</text>
+    <text x="720" y="655" class="sans cardTitle">Result / failure</text>
+    <text x="680" y="695" class="sans cardText">Evidence: what held · what broke</text>
     <text x="680" y="720" class="sans micro">A failed lemma is still useful history</text>
   </g>
 
-  <g filter="url(#shadow)">
-    <rect x="1110" y="610" width="330" height="130" rx="22" fill="#332b42" stroke="#b985d0" stroke-opacity="0.9"/>
+  <g>
+    <rect filter="url(#shadow)" x="1110" y="610" width="330" height="130" rx="22" fill="#332b42" stroke="#b985d0" stroke-opacity="0.9"/>
     <circle cx="1155" cy="655" r="20" fill="#594269" stroke="#f0b56c" stroke-width="2"/>
     <path d="M1147 655l6 6 11-13" fill="none" stroke="#ffe0a2" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
     <text x="1195" y="655" class="sans cardTitle">New branch</text>

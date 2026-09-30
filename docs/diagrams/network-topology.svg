@@ -83,8 +83,8 @@
   <path d="M600 410L940 410M600 410L775 625M940 410L775 625" fill="none" stroke="#5ed7cb" stroke-opacity="0.32" stroke-width="5" stroke-linecap="round"/>
   <path d="M600 410L940 410M600 410L775 625M940 410L775 625" fill="none" stroke="#83e8da" stroke-opacity="0.78" stroke-width="2" stroke-dasharray="8 12" marker-end="url(#arrowTeal)"/>
 
-  <g filter="url(#shadow)">
-    <rect x="490" y="345" width="220" height="132" rx="20" fill="#152d42" stroke="#4b8790"/>
+  <g>
+    <rect filter="url(#shadow)" x="490" y="345" width="220" height="132" rx="20" fill="#152d42" stroke="#4b8790"/>
     <circle cx="535" cy="390" r="24" fill="#193f51" stroke="#64d8ca" stroke-width="2"/>
     <path d="M535 376v28M521 390h28" stroke="#9af1e5" stroke-width="3" stroke-linecap="round"/>
     <text x="575" y="390" class="sans nodeTitle">Node A</text>
@@ -92,8 +92,8 @@
     <text x="575" y="445" class="sans micro">keeps identity + history</text>
   </g>
 
-  <g filter="url(#shadow)">
-    <rect x="830" y="345" width="220" height="132" rx="20" fill="#152d42" stroke="#4b8790"/>
+  <g>
+    <rect filter="url(#shadow)" x="830" y="345" width="220" height="132" rx="20" fill="#152d42" stroke="#4b8790"/>
     <circle cx="875" cy="390" r="24" fill="#193f51" stroke="#64d8ca" stroke-width="2"/>
     <path d="M865 390h20M875 380v20" stroke="#9af1e5" stroke-width="3" stroke-linecap="round"/>
     <text x="915" y="390" class="sans nodeTitle">Node B</text>
@@ -101,8 +101,8 @@
     <text x="915" y="445" class="sans micro">publishes within a grant</text>
   </g>
 
-  <g filter="url(#shadow)">
-    <rect x="665" y="560" width="220" height="132" rx="20" fill="#152d42" stroke="#4b8790"/>
+  <g>
+    <rect filter="url(#shadow)" x="665" y="560" width="220" height="132" rx="20" fill="#152d42" stroke="#4b8790"/>
     <circle cx="710" cy="605" r="24" fill="#193f51" stroke="#64d8ca" stroke-width="2"/>
     <path d="M699 605l8 8 15-17" fill="none" stroke="#9af1e5" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
     <text x="750" y="605" class="sans nodeTitle">Node C</text>
@@ -110,9 +110,9 @@
     <text x="750" y="660" class="sans micro">replicates + challenges</text>
   </g>
 
-  <rect x="648" y="424" width="244" height="86" rx="18" fill="#0b1726" stroke="#70dfd1" stroke-opacity="0.7"/>
-  <text x="770" y="458" text-anchor="middle" class="sans kicker">NO CENTRAL AUTHORITY</text>
-  <text x="770" y="486" text-anchor="middle" class="sans micro">signed · content-addressed · branchable</text>
+  <rect x="648" y="492" width="244" height="52" rx="16" fill="#0b1726" stroke="#70dfd1" stroke-opacity="0.7"/>
+  <text x="770" y="515" text-anchor="middle" class="sans kicker">NO CENTRAL AUTHORITY</text>
+  <text x="770" y="536" text-anchor="middle" class="sans micro">signed · content-addressed · branchable</text>
 
   <path d="M380 320C405 320 405 320 445 320" fill="none" stroke="#f1b765" stroke-width="2.5" stroke-dasharray="7 9" marker-end="url(#arrowAmber)"/>
   <path d="M1150 320C1180 320 1180 320 1220 320" fill="none" stroke="#64d8ca" stroke-width="2.5" stroke-dasharray="7 9" marker-end="url(#arrowTeal)"/>
