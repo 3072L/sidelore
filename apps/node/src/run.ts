@@ -70,7 +70,7 @@ if (process.env.SIDELORE_PUBLIC_PORT) {
   );
 }
 console.log(
-  `Sidelore self-hosted testnet. Local connection file: ${resolve(data, "local-connection.json")}`,
+  `Sidelore decentralized research network · self-hosted testnet. Local connection file: ${resolve(data, "local-connection.json")}`,
 );
 console.log(JSON.stringify(local.localService.network?.status()));
 let closing = false;

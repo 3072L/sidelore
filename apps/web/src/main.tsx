@@ -1950,7 +1950,7 @@ function App() {
             </section>
           )}
           <footer>
-            <span>{tr("Local research. Shared evidence.")}</span>
+            <span>{tr("Decentralized research network. Shared evidence.")}</span>
             <span>{tr("Publication requires explicit permission")}</span>
           </footer>
         </main>

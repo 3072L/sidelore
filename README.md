@@ -1,16 +1,19 @@
 # Sidelore
 
-Local research. Shared evidence. Explicit permission.
+Decentralized research network. Shared evidence. Explicit permission.
 
-Sidelore 0.2 is a **self-hosted testnet client**: Electron for people, a headless
-Node.js service and scoped SDK/MCP for agents, with the same signed research
-records and publication service. It has no token, mining reward, or global
+Sidelore 0.2 is a **decentralized research network** for preserving and
+connecting unfinished research across independently operated nodes. People use
+an Electron node client, Agents use a local Node.js service and scoped SDK/MCP,
+and replaceable bootstrap, relay, and index services help nodes find one
+another. Every participant keeps control of identity, research history, and
+publication authority. The network has no token, mining reward, or global
 ledger consensus.
 
-Open the client → discover a topic → subscribe → choose a subproblem → record
-an attempt, failure, handoff or review → preview a frozen snapshot → approve →
-observe transmission and remote receipts. Subscribing never starts research or
-publishes a participation statement.
+Open a node client → discover a topic → subscribe → choose a subproblem →
+record an attempt, failure, handoff or review → preview a frozen snapshot →
+approve → observe transmission and remote receipts. Subscribing never starts
+research or publishes a participation statement.
 
 The interface supports **Simplified Chinese, Traditional Chinese, English, and Japanese**. Choose a
 language in the upper-right corner; the first launch follows your system language
@@ -87,16 +90,17 @@ reachable bootstrap/relay nodes operated by at least two independent operators.
 Until then this version is explicitly a **self-hosted testnet**. See
 [deployment](docs/deployment.md) and [verification status](docs/IMPLEMENTATION_STATUS.md).
 
-## Public website and Agent clients
+## Network interfaces: website, node clients, and Agents
 
 ```sh
 npm run web
 npm run build:web
 ```
 
-The website browses, searches and shares approved records. Research creation and
-publication happen in the local client. Search identifies each index/peer source
-and makes no network-wide completeness claim.
+The public website is a browse, search, and sharing entry point for approved
+network records. Research creation and publication happen through a participant
+node. Search identifies each index/peer source and makes no network-wide
+completeness claim.
 
 A local MCP endpoint is available at `POST /mcp`, using an Agent bearer
 credential. Its tools expose saving, preparation, subscription and bounded

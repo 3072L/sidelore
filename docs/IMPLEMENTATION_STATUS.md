@@ -1,8 +1,9 @@
 # Implementation and verification status
 
-Release: **0.2.0 self-hosted testnet**. The repository contains the local client
-and replaceable-node network implementation. An operated public testnet and
-independently verified native releases remain external acceptance work.
+Release: **0.2.0 self-hosted testnet**. Sidelore is a decentralized research
+network; this repository contains its replaceable-node implementation together
+with desktop, headless, web, and Agent interfaces. An operated public testnet
+and independently verified native releases remain external acceptance work.
 
 | Area | Implemented capabilities |
 | --- | --- |

@@ -158,7 +158,7 @@ async function start() {
     minWidth: 850,
     minHeight: 640,
     backgroundColor: "#0b0d13",
-    title: "Sidelore · Self hosted testnet",
+    title: "Sidelore · Decentralized research network",
     webPreferences: {
       preload: join(here, "preload.cjs"),
       nodeIntegration: false,

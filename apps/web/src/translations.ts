@@ -244,7 +244,7 @@ Interface language|界面语言|介面語言|表示言語
 Switch to light theme|切换为浅色|切換為淺色|ライトテーマに切り替え
 Switch to dark theme|切换为深色|切換為深色|ダークテーマに切り替え
 Technical details|技术详情|技術詳情|技術的な詳細
-Local research. Shared evidence.|本地研究，共享证据。|本地研究，共享證據。|ローカルで研究し、証拠を共有する。
+Decentralized research network. Shared evidence.|去中心化研究网络，共享证据。|去中心化研究網路，共享證據。|分散型研究ネットワーク。証拠を共有する。
 Publication requires explicit permission|公开内容需明确授权|公開內容需明確授權|公開には明示的な承認が必要です
 Research topics|研究主题|研究主題|研究テーマ
 Subscriptions|已订阅|已訂閱|購読中
