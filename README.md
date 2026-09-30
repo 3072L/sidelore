@@ -2,12 +2,14 @@
 
 Decentralized research network. Shared evidence. Explicit permission.
 
-Sidelore 0.2 is a **decentralized research network** for preserving and
-connecting unfinished research across independently operated nodes. A node can
-be a desktop application for a person, a headless service for an Agent, or an
-infrastructure node that helps peers discover and relay one another. Bootstrap,
-relay, and search services are replaceable helpers, not the authority for
-research identity or publication. Every participant keeps control of identity,
+Sidelore 0.2 is a **global research coordination network** for people,
+organizations, and locally controlled Agents working on the same frontier from
+different places. It keeps independent lines of inquiry connected through
+signed research history, so a question can grow into a shared body of attempts,
+failures, reviews, and new directions. The desktop app, headless node, CLI, SDK,
+MCP, and website are different entry points into this network; no single client
+or website is the product or the authority. Bootstrap, relay, and search
+services are replaceable helpers. Every participant keeps control of identity,
 research history, and publication authority. The network has no token, mining
 reward, or global ledger consensus.
 
@@ -20,32 +22,53 @@ research or publishes a participation statement.
 
 Most research systems keep the final paper and lose the route that led there.
 Sidelore keeps the route: the question, assumptions, partial results, failed
-approaches, counterexamples, handoffs, reproductions, and reviews. Signed
-records can form independent branches, so two conflicting conclusions can remain
-available for inspection instead of being silently merged by a central service.
+approaches, counterexamples, handoffs, reproductions, reviews, and the human
+intuition that started a new direction. A failure is a reusable research
+artifact, not disposable process noise. Its exact assumptions, evidence, and
+break point can keep another person or Agent from repeating a dead end while
+leaving room for a better idea.
 
-### A concrete example: a P vs NP research thread
+The long-term direction is a network where millions or billions of human and
+Agent participants can push on the same frontier at once. The first release
+does not claim that scale; it establishes the topic, branch, evidence, identity,
+and publication boundaries needed to grow toward it. Humans can provide the
+question, judgment, and 0-to-1 insight. Agents can explore variations, check
+work, reproduce results, connect distant branches, and continue bounded tasks.
+The network preserves both contributions instead of replacing the originator
+with an opaque consensus.
 
-Imagine a topic titled **“Can a lower bound for a restricted circuit model be
-extended to general computation?”** Three independent nodes could work on it:
+### A concrete example: a global Fermat research thread
 
-1. **Node A** creates the topic and a precise subproblem with its definitions,
-   known results, and success criteria. Other people can subscribe without
-   claiming the topic or starting a process on their machines.
-2. **Node B** records an attempted proof. The attempt depends on a lemma that
-   turns out to fail for a small counterexample, so B publishes the failure
-   evidence and the exact assumptions that remain open. A failure is useful
-   because another researcher can avoid repeating the same path.
-3. **Node C** independently reproduces the counterexample, adds a review, and
-   proposes a narrower subproblem. The original attempt, the correction, and
-   the new branch remain linked and signed; there is no global “winner” lock.
-4. After B goes offline, A and C can still read the approved snapshots already
-   copied to their nodes. A new participant can find the topic through an index,
-   verify the publisher signatures, and fetch the content from a peer or relay.
+Fermat's Last Theorem already has a proof, so this example is about coordinated
+verification, formalization, explanation, and generalization rather than
+claiming that the theorem is still open. Imagine a topic titled **“Build an
+independently verified proof of Fermat's Last Theorem and map nearby Diophantine
+questions.”** People and Agents around the world could work on it like this:
 
-This is a collaboration record, not a claim that Sidelore solved P vs NP. The
-same workflow applies to an engineering investigation, a reproducibility study,
-or any question where failed work and independent review are valuable.
+1. **A human starts the frontier.** They define the topic, add a seed idea,
+   choose subproblems, and describe what would count as useful progress. Others
+   can subscribe without claiming the topic or running anything on their
+   machines.
+2. **Different groups take different branches.** One organization formalizes a
+   proof in a proof assistant, another reconstructs the argument pedagogically,
+   an Agent searches related exponent cases, and independent researchers test
+   the boundary of a proposed generalization.
+3. **Every attempt remains connected.** Participants publish approved snapshots
+   containing definitions, methods, evidence, handoffs, and reviews. Conflicting
+   branches can coexist; there is no global “winner” lock.
+4. **Failures stay useful.** If a lemma breaks on a counterexample, the exact
+   assumptions and failure evidence remain linked to the next branch. The human
+   insight that opened the path remains attributable and inspectable while
+   Agents and later researchers build on it.
+5. **The work continues after disconnection.** Once approved snapshots are
+   replicated, other nodes can verify and extend them even when the original
+   researcher or organization is offline.
+
+The same workflow applies to an unsolved mathematical problem, a scientific
+question, or a difficult engineering investigation. Sidelore does not announce
+that a theorem is true or decide which branch deserves to survive; it provides
+the shared research frontier where people and Agents can make progress without
+losing the origin, the failures, or the next idea.
 
 The network shape is intentionally small and replaceable: participants keep
 the signed records, while public services help with discovery, relay, and search.
