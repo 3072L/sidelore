@@ -1,0 +1,124 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 900" role="img" aria-labelledby="title desc">
+  <title id="title">Sidelore research branching loop</title>
+  <desc id="desc">A topic becomes a precise subproblem, independent attempts produce results or failure evidence, reviews create corrections or new branches, and the work loops back to the next subproblem.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0a1221"/>
+      <stop offset="0.5" stop-color="#132339"/>
+      <stop offset="1" stop-color="#201b35"/>
+    </linearGradient>
+    <linearGradient id="card" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#1d3650"/>
+      <stop offset="1" stop-color="#15253e"/>
+    </linearGradient>
+    <linearGradient id="accent" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#86efdc"/>
+      <stop offset="1" stop-color="#5b87e8"/>
+    </linearGradient>
+    <linearGradient id="branch" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#ffc978"/>
+      <stop offset="1" stop-color="#cb76db"/>
+    </linearGradient>
+    <pattern id="grid" width="44" height="44" patternUnits="userSpaceOnUse">
+      <path d="M44 0H0V44" fill="none" stroke="#c0d4ef" stroke-opacity="0.05"/>
+    </pattern>
+    <filter id="shadow" x="-30%" y="-30%" width="160%" height="180%">
+      <feDropShadow dx="0" dy="17" stdDeviation="18" flood-color="#000714" flood-opacity="0.5"/>
+    </filter>
+    <filter id="glow" x="-70%" y="-70%" width="240%" height="240%">
+      <feGaussianBlur stdDeviation="14" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <marker id="arrow" markerWidth="11" markerHeight="11" refX="9" refY="5.5" orient="auto">
+      <path d="M0 0L11 5.5L0 11Z" fill="#83e8d6"/>
+    </marker>
+    <marker id="arrowBranch" markerWidth="11" markerHeight="11" refX="9" refY="5.5" orient="auto">
+      <path d="M0 0L11 5.5L0 11Z" fill="#f0b56c"/>
+    </marker>
+    <style>
+      .sans { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Inter, Arial, sans-serif; }
+      .title { fill: #f5faff; font-size: 34px; font-weight: 700; letter-spacing: -0.6px; }
+      .subtitle { fill: #a5bad0; font-size: 18px; }
+      .kicker { fill: #80e6d4; font-size: 13px; font-weight: 700; letter-spacing: 2.6px; }
+      .cardTitle { fill: #f5faff; font-size: 20px; font-weight: 700; }
+      .cardText { fill: #acc1d5; font-size: 15px; }
+      .micro { fill: #8da5bb; font-size: 13px; }
+      .number { fill: #d9fff7; font-size: 15px; font-weight: 800; }
+    </style>
+  </defs>
+
+  <rect width="1600" height="900" rx="30" fill="url(#bg)"/>
+  <rect x="1" y="1" width="1598" height="898" rx="29" fill="url(#grid)" stroke="#6f8da8" stroke-opacity="0.2"/>
+  <circle cx="800" cy="430" r="210" fill="#62cfd0" opacity="0.09" filter="url(#glow)"/>
+
+  <text x="80" y="76" class="sans kicker">SIDELORE / RESEARCH RECORD</text>
+  <text x="80" y="122" class="sans title">A result is a branch, not the end of the question</text>
+  <text x="80" y="151" class="sans subtitle">Independent attempts, failure evidence, and review stay connected as signed research history.</text>
+
+  <path d="M800 265C1040 265 1270 310 1320 430C1370 552 1130 652 800 652C470 652 230 552 280 430C330 310 560 265 800 265Z" fill="none" stroke="#4e7d9b" stroke-opacity="0.35" stroke-width="3" stroke-dasharray="8 12"/>
+  <path d="M800 265C1040 265 1270 310 1320 430" fill="none" stroke="#83e8d6" stroke-width="3" marker-end="url(#arrow)"/>
+  <path d="M1320 430C1270 552 1130 652 800 652" fill="none" stroke="#83e8d6" stroke-width="3" marker-end="url(#arrow)"/>
+  <path d="M800 652C470 652 230 552 280 430" fill="none" stroke="#83e8d6" stroke-width="3" marker-end="url(#arrow)"/>
+  <path d="M280 430C330 310 560 265 800 265" fill="none" stroke="#83e8d6" stroke-width="3" marker-end="url(#arrow)"/>
+
+  <g filter="url(#shadow)">
+    <circle cx="800" cy="445" r="135" fill="#102b42" stroke="url(#accent)" stroke-width="3"/>
+    <circle cx="800" cy="445" r="112" fill="none" stroke="#80e6d4" stroke-opacity="0.2" stroke-width="1" stroke-dasharray="4 9"/>
+    <text x="800" y="410" text-anchor="middle" class="sans kicker">TOPIC</text>
+    <text x="800" y="450" text-anchor="middle" class="sans cardTitle" font-size="27">P vs NP</text>
+    <text x="800" y="482" text-anchor="middle" class="sans micro">a shared question</text>
+    <text x="800" y="510" text-anchor="middle" class="sans micro">not a global claim of truth</text>
+  </g>
+
+  <g filter="url(#shadow)">
+    <rect x="635" y="175" width="330" height="130" rx="22" fill="url(#card)" stroke="#5c9dc1" stroke-opacity="0.8"/>
+    <circle cx="680" cy="220" r="20" fill="#24516a" stroke="#83e8d6" stroke-width="2"/>
+    <text x="680" y="226" text-anchor="middle" class="sans number">01</text>
+    <text x="720" y="220" class="sans cardTitle">Precise subproblem</text>
+    <text x="680" y="260" class="sans cardText">Definitions · assumptions · criteria</text>
+    <text x="680" y="285" class="sans micro">Make the question inspectable</text>
+  </g>
+
+  <g filter="url(#shadow)">
+    <rect x="80" y="365" width="330" height="130" rx="22" fill="url(#card)" stroke="#5c9dc1" stroke-opacity="0.8"/>
+    <circle cx="125" cy="410" r="20" fill="#24516a" stroke="#83e8d6" stroke-width="2"/>
+    <text x="125" y="416" text-anchor="middle" class="sans number">02</text>
+    <text x="165" y="410" class="sans cardTitle">Independent attempt</text>
+    <text x="125" y="450" class="sans cardText">Proof · experiment · implementation</text>
+    <text x="125" y="475" class="sans micro">Different nodes can repeat the work</text>
+  </g>
+
+  <g filter="url(#shadow)">
+    <rect x="1190" y="365" width="330" height="130" rx="22" fill="url(#card)" stroke="#5c9dc1" stroke-opacity="0.8"/>
+    <circle cx="1235" cy="410" r="20" fill="#24516a" stroke="#83e8d6" stroke-width="2"/>
+    <text x="1235" y="416" text-anchor="middle" class="sans number">04</text>
+    <text x="1275" y="410" class="sans cardTitle">Reproduction &amp; review</text>
+    <text x="1235" y="450" class="sans cardText">Counterexample · method · result</text>
+    <text x="1235" y="475" class="sans micro">A review can challenge the branch</text>
+  </g>
+
+  <g filter="url(#shadow)">
+    <rect x="635" y="610" width="330" height="130" rx="22" fill="#372b3b" stroke="#ce8b76" stroke-opacity="0.88"/>
+    <circle cx="680" cy="655" r="20" fill="#684456" stroke="#f0b56c" stroke-width="2"/>
+    <text x="680" y="661" text-anchor="middle" class="sans number">03</text>
+    <text x="720" y="655" class="sans cardTitle">Result or failure evidence</text>
+    <text x="680" y="695" class="sans cardText">What held · what broke · why</text>
+    <text x="680" y="720" class="sans micro">A failed lemma is still useful history</text>
+  </g>
+
+  <g filter="url(#shadow)">
+    <rect x="1110" y="610" width="330" height="130" rx="22" fill="#332b42" stroke="#b985d0" stroke-opacity="0.9"/>
+    <circle cx="1155" cy="655" r="20" fill="#594269" stroke="#f0b56c" stroke-width="2"/>
+    <path d="M1147 655l6 6 11-13" fill="none" stroke="#ffe0a2" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+    <text x="1195" y="655" class="sans cardTitle">New branch</text>
+    <text x="1155" y="695" class="sans cardText">Correction · narrower question · pivot</text>
+    <text x="1155" y="720" class="sans micro">The next researcher has a map</text>
+  </g>
+
+  <path d="M1320 500C1370 548 1370 580 1350 608" fill="none" stroke="#f0b56c" stroke-width="3" stroke-dasharray="7 9" marker-end="url(#arrowBranch)"/>
+  <path d="M1110 675C1040 675 1010 660 965 640" fill="none" stroke="#f0b56c" stroke-width="3" stroke-dasharray="7 9" marker-end="url(#arrowBranch)"/>
+
+  <text x="80" y="830" class="sans micro">Signed records preserve provenance.</text>
+  <text x="800" y="830" text-anchor="middle" class="sans micro">Conflicting branches can coexist.</text>
+  <text x="1520" y="830" text-anchor="end" class="sans micro">No exclusive claim lock.</text>
+</svg>

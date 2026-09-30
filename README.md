@@ -47,6 +47,18 @@ This is a collaboration record, not a claim that Sidelore solved P vs NP. The
 same workflow applies to an engineering investigation, a reproducibility study,
 or any question where failed work and independent review are valuable.
 
+The network shape is intentionally small and replaceable: participants keep
+the signed records, while public services help with discovery, relay, and search.
+
+<p align="center">
+  <img src="docs/diagrams/network-topology.svg" alt="Sidelore peer mesh with replaceable bootstrap, relay, and index services" width="100%" />
+</p>
+<p align="center"><sub>Participant nodes keep the signed history; public infrastructure helps them connect.</sub></p>
+
+There is no central node that owns the research history. If an index or one
+bootstrap node disappears, peers that know one another can continue exchanging
+the snapshots they have already verified.
+
 ## What is local and what is shared
 
 The node separates a participant's working space from its approved publication
@@ -66,6 +78,17 @@ participant's entire workspace. A bounded Agent grant can automate a specific
 scope, but it cannot approve itself, change a workspace's privacy class, or
 publish after expiry or revocation.
 
+The publication boundary is the control point between working privately and
+joining the network:
+
+<p align="center">
+  <img src="docs/diagrams/publication-boundary.svg" alt="Sidelore publication boundary from local workspace to approved network snapshot" width="100%" />
+</p>
+<p align="center"><sub>Only the CID-bound, approved snapshot enters P2P, HTTP, or index paths.</sub></p>
+
+Changing the snapshot after approval sends it back through the same boundary;
+the network never reads the whole workspace directly.
+
 ## How nodes cooperate
 
 - **Discovery:** a node starts with replaceable bootstrap addresses, then keeps
@@ -84,6 +107,13 @@ publish after expiry or revocation.
 No node executes code supplied by another participant. Agents use the local
 scoped API or MCP; received research is data to verify, not a remote program to
 run.
+
+The research record itself is a branching loop rather than a single claim:
+
+<p align="center">
+  <img src="docs/diagrams/research-loop.svg" alt="Sidelore research loop from subproblem through attempt, failure evidence, review, and a new branch" width="100%" />
+</p>
+<p align="center"><sub>A failed path remains useful when its assumptions and evidence are inspectable.</sub></p>
 
 ## Who uses which part
 

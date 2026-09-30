@@ -1,0 +1,129 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 900" role="img" aria-labelledby="title desc">
+  <title id="title">Sidelore decentralized network topology</title>
+  <desc id="desc">Three participant nodes exchange signed snapshots over a peer mesh. Replaceable bootstrap and relay infrastructure helps discovery and connectivity. An optional public index exposes approved records only.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#08111f"/>
+      <stop offset="0.55" stop-color="#101d30"/>
+      <stop offset="1" stop-color="#17283b"/>
+    </linearGradient>
+    <linearGradient id="mesh" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#11283a" stop-opacity="0.98"/>
+      <stop offset="1" stop-color="#102035" stop-opacity="0.84"/>
+    </linearGradient>
+    <linearGradient id="teal" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#7be7d3"/>
+      <stop offset="1" stop-color="#2db7b1"/>
+    </linearGradient>
+    <linearGradient id="amber" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#ffd894"/>
+      <stop offset="1" stop-color="#e79c49"/>
+    </linearGradient>
+    <pattern id="grid" width="44" height="44" patternUnits="userSpaceOnUse">
+      <path d="M44 0H0V44" fill="none" stroke="#8eb0c9" stroke-opacity="0.055"/>
+    </pattern>
+    <filter id="shadow" x="-30%" y="-30%" width="160%" height="170%">
+      <feDropShadow dx="0" dy="18" stdDeviation="18" flood-color="#000814" flood-opacity="0.45"/>
+    </filter>
+    <filter id="glow" x="-70%" y="-70%" width="240%" height="240%">
+      <feGaussianBlur stdDeviation="10" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <marker id="arrowTeal" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto">
+      <path d="M0 0L10 5L0 10Z" fill="#64d8ca"/>
+    </marker>
+    <marker id="arrowAmber" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto">
+      <path d="M0 0L10 5L0 10Z" fill="#f1b765"/>
+    </marker>
+    <style>
+      .sans { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Inter, Arial, sans-serif; }
+      .title { fill: #f5fbff; font-size: 34px; font-weight: 700; letter-spacing: -0.6px; }
+      .subtitle { fill: #9bb4c8; font-size: 18px; font-weight: 400; }
+      .kicker { fill: #77dfd1; font-size: 13px; font-weight: 700; letter-spacing: 2.6px; }
+      .cardTitle { fill: #f5fbff; font-size: 20px; font-weight: 700; }
+      .cardText { fill: #a9c0d2; font-size: 16px; font-weight: 400; }
+      .nodeTitle { fill: #f5fbff; font-size: 19px; font-weight: 700; }
+      .nodeText { fill: #a9c0d2; font-size: 15px; }
+      .micro { fill: #88a6ba; font-size: 13px; letter-spacing: 0.5px; }
+      .pill { fill: #d8f8f0; font-size: 13px; font-weight: 700; letter-spacing: 0.5px; }
+    </style>
+  </defs>
+
+  <rect width="1600" height="900" rx="30" fill="url(#bg)"/>
+  <rect x="1" y="1" width="1598" height="898" rx="29" fill="url(#grid)" stroke="#6e91a9" stroke-opacity="0.2"/>
+  <circle cx="790" cy="435" r="300" fill="#36b8ad" opacity="0.06" filter="url(#glow)"/>
+
+  <text x="80" y="76" class="sans kicker">SIDELORE / NETWORK MODEL</text>
+  <text x="80" y="122" class="sans title">A network of peers, not a central database</text>
+  <text x="80" y="151" class="sans subtitle">Participants keep signed records. Replaceable services help them find and reach one another.</text>
+
+  <rect x="70" y="205" width="310" height="230" rx="22" fill="#0d1a2b" stroke="#35516a" stroke-opacity="0.85" filter="url(#shadow)"/>
+  <rect x="70" y="205" width="7" height="230" rx="3.5" fill="url(#amber)"/>
+  <text x="100" y="247" class="sans kicker" fill="#f1b765">REPLACEABLE INFRASTRUCTURE</text>
+  <text x="100" y="285" class="sans cardTitle">Bootstrap &amp; relay nodes</text>
+  <text x="100" y="322" class="sans cardText">• discovery addresses</text>
+  <text x="100" y="350" class="sans cardText">• Circuit Relay v2 / DCUtR</text>
+  <text x="100" y="378" class="sans cardText">• optional content index</text>
+  <text x="100" y="411" class="sans micro">Helpful infrastructure, not ownership</text>
+
+  <rect x="1220" y="205" width="310" height="230" rx="22" fill="#0d1a2b" stroke="#35516a" stroke-opacity="0.85" filter="url(#shadow)"/>
+  <rect x="1220" y="205" width="7" height="230" rx="3.5" fill="url(#teal)"/>
+  <text x="1250" y="247" class="sans kicker">OPTIONAL READ PATH</text>
+  <text x="1250" y="285" class="sans cardTitle">Website &amp; public API</text>
+  <text x="1250" y="322" class="sans cardText">• browse and search</text>
+  <text x="1250" y="350" class="sans cardText">• approved records only</text>
+  <text x="1250" y="378" class="sans cardText">• no vault or private keys</text>
+  <text x="1250" y="411" class="sans micro">An entry point, not the source of truth</text>
+
+  <rect x="420" y="190" width="700" height="570" rx="34" fill="url(#mesh)" stroke="#4c7188" stroke-opacity="0.75" filter="url(#shadow)"/>
+  <text x="465" y="242" class="sans kicker">PARTICIPANT PEER MESH</text>
+  <text x="465" y="278" class="sans cardTitle">Signed snapshots move between independent nodes</text>
+  <text x="465" y="308" class="sans micro">DHT discovery · topic-scoped GossipSub hints · CID verification</text>
+
+  <path d="M600 410L940 410M600 410L775 625M940 410L775 625" fill="none" stroke="#5ed7cb" stroke-opacity="0.32" stroke-width="5" stroke-linecap="round"/>
+  <path d="M600 410L940 410M600 410L775 625M940 410L775 625" fill="none" stroke="#83e8da" stroke-opacity="0.78" stroke-width="2" stroke-dasharray="8 12" marker-end="url(#arrowTeal)"/>
+
+  <g filter="url(#shadow)">
+    <rect x="490" y="345" width="220" height="132" rx="20" fill="#152d42" stroke="#4b8790"/>
+    <circle cx="535" cy="390" r="24" fill="#193f51" stroke="#64d8ca" stroke-width="2"/>
+    <path d="M535 376v28M521 390h28" stroke="#9af1e5" stroke-width="3" stroke-linecap="round"/>
+    <text x="575" y="390" class="sans nodeTitle">Node A</text>
+    <text x="575" y="418" class="sans nodeText">researcher · desktop</text>
+    <text x="575" y="445" class="sans micro">keeps identity + history</text>
+  </g>
+
+  <g filter="url(#shadow)">
+    <rect x="830" y="345" width="220" height="132" rx="20" fill="#152d42" stroke="#4b8790"/>
+    <circle cx="875" cy="390" r="24" fill="#193f51" stroke="#64d8ca" stroke-width="2"/>
+    <path d="M865 390h20M875 380v20" stroke="#9af1e5" stroke-width="3" stroke-linecap="round"/>
+    <text x="915" y="390" class="sans nodeTitle">Node B</text>
+    <text x="915" y="418" class="sans nodeText">Agent · headless</text>
+    <text x="915" y="445" class="sans micro">publishes within a grant</text>
+  </g>
+
+  <g filter="url(#shadow)">
+    <rect x="665" y="560" width="220" height="132" rx="20" fill="#152d42" stroke="#4b8790"/>
+    <circle cx="710" cy="605" r="24" fill="#193f51" stroke="#64d8ca" stroke-width="2"/>
+    <path d="M699 605l8 8 15-17" fill="none" stroke="#9af1e5" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+    <text x="750" y="605" class="sans nodeTitle">Node C</text>
+    <text x="750" y="633" class="sans nodeText">reviewer · CLI</text>
+    <text x="750" y="660" class="sans micro">replicates + challenges</text>
+  </g>
+
+  <rect x="648" y="424" width="244" height="86" rx="18" fill="#0b1726" stroke="#70dfd1" stroke-opacity="0.7"/>
+  <text x="770" y="458" text-anchor="middle" class="sans kicker">NO CENTRAL AUTHORITY</text>
+  <text x="770" y="486" text-anchor="middle" class="sans micro">signed · content-addressed · branchable</text>
+
+  <path d="M380 320C405 320 405 320 445 320" fill="none" stroke="#f1b765" stroke-width="2.5" stroke-dasharray="7 9" marker-end="url(#arrowAmber)"/>
+  <path d="M1150 320C1180 320 1180 320 1220 320" fill="none" stroke="#64d8ca" stroke-width="2.5" stroke-dasharray="7 9" marker-end="url(#arrowTeal)"/>
+
+  <rect x="70" y="790" width="1460" height="58" rx="18" fill="#0b1726" stroke="#35516a"/>
+  <circle cx="103" cy="819" r="8" fill="#64d8ca"/>
+  <text x="126" y="826" class="sans pill">DIRECT WHEN POSSIBLE</text>
+  <circle cx="372" cy="819" r="8" fill="#f1b765"/>
+  <text x="395" y="826" class="sans pill">RELAY WHEN NEEDED</text>
+  <circle cx="657" cy="819" r="8" fill="#a68cff"/>
+  <text x="680" y="826" class="sans pill">VERIFY EVERY SNAPSHOT</text>
+  <circle cx="1008" cy="819" r="8" fill="#89a9bf"/>
+  <text x="1031" y="826" class="sans pill">INDEXES ARE OPTIONAL</text>
+</svg>
