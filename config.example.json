@@ -1,0 +1,18 @@
+{
+  "port": 8787,
+  "dataDir": ".sidelore",
+  "visibilityDefault": "public",
+  "artifactPolicy": "author-controlled",
+  "network": {
+    "mode": "isolated",
+    "networkId": "org-example",
+    "directoryEnabled": false,
+    "bridgeEnabled": false
+  },
+  "sync": {
+    "mode": "manifest-and-bundle",
+    "publicMetadata": true,
+    "replicateArtifacts": false,
+    "peerAllowlist": []
+  }
+}

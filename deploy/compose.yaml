@@ -1,0 +1,24 @@
+services:
+  relay:
+    build:
+      context: ..
+      dockerfile: deploy/Dockerfile
+    restart: unless-stopped
+    environment:
+      SIDELORE_DATA_DIR: /data
+      SIDELORE_VAULT_PASSPHRASE_FILE: /run/secrets/vault_passphrase
+      SIDELORE_NETWORK_PROFILE: /config/network.json
+      SIDELORE_PUBLIC_PORT: 8788
+    ports:
+      - "4001:4001"
+      - "8788:8788"
+    volumes:
+      - sidelore-data:/data
+      - ./network.example.json:/config/network.json:ro
+    secrets:
+      - vault_passphrase
+secrets:
+  vault_passphrase:
+    file: ./vault-passphrase.local
+volumes:
+  sidelore-data:

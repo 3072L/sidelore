@@ -1,0 +1,14 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://sidelore.local/schema/topic-activity.schema.json",
+  "title": "Sidelore topic activity",
+  "type": "object",
+  "required": ["activityId", "topicId", "activityType", "payload", "authorIdentityId", "visibility", "createdAt", "contentCid", "signature"],
+  "properties": {
+    "activityId": {"type": "string", "minLength": 1}, "topicId": {"type": "string", "minLength": 1}, "subproblemId": {"type": "string", "minLength": 1},
+    "activityType": {"enum": ["attempt_started", "handoff_requested", "summary", "status_update", "challenge", "evidence_link"]}, "payload": {"type": "object"}, "authorIdentityId": {"type": "string"}, "visibility": {"enum": ["public", "federated", "private"]}, "verificationState": {"enum": ["author_claim", "unverified", "replicated", "challenged", "formally_verified", "withdrawn"]},
+    "createdAt": {"type": "string", "format": "date-time"}, "contentCid": {"type": "string", "minLength": 1}, "signature": {"type": "string", "minLength": 1},
+    "governanceApprovals": {"type": "array", "items": {"type": "object", "required": ["identityId", "signature"], "properties": {"identityId": {"type": "string"}, "signature": {"type": "string"}}, "additionalProperties": false}}
+  },
+  "additionalProperties": false
+}

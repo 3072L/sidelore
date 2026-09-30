@@ -1,0 +1,23 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://sidelore.local/schema/event.schema.json",
+  "title": "Sidelore immutable event",
+  "type": "object",
+  "required": ["eventId", "recordId", "parentEventIds", "authorIdentityId", "eventType", "payload", "artifactRefs", "citationRefs", "visibility", "createdAt", "signature", "contentCid"],
+  "properties": {
+    "eventId": {"type": "string", "minLength": 1},
+    "recordId": {"type": "string", "minLength": 1},
+    "parentEventIds": {"type": "array", "items": {"type": "string"}},
+    "authorIdentityId": {"type": "string", "minLength": 1},
+    "eventType": {"enum": ["hypothesis", "experiment", "observation", "failure", "counterexample", "pivot", "result", "open_question", "review", "fork", "response", "retraction", "tombstone"]},
+    "payload": {"type": "object"},
+    "artifactRefs": {"type": "array", "items": {"type": "object", "required": ["cid"], "properties": {"cid": {"type": "string", "minLength": 1}, "label": {"type": "string"}, "mediaType": {"type": "string"}, "byteSize": {"type": "integer", "minimum": 0}, "encryptionMode": {"enum": ["none", "xchacha20-poly1305"]}, "keyEnvelope": {"type": "object"}}, "additionalProperties": false}},
+    "citationRefs": {"type": "array", "items": {"type": "object", "properties": {"recordId": {"type": "string", "minLength": 1}, "eventId": {"type": "string", "minLength": 1}, "locator": {"type": "string"}, "quote": {"type": "string"}, "relation": {"enum": ["supports", "contradicts", "context", "derived_from"]}}, "anyOf": [{"required": ["recordId"]}, {"required": ["eventId"]}], "additionalProperties": false}},
+    "visibility": {"enum": ["public", "federated", "private"]},
+    "license": {"type": "string"},
+    "createdAt": {"type": "string", "format": "date-time"},
+    "signature": {"type": "string", "minLength": 1},
+    "contentCid": {"type": "string", "pattern": "^b[a-z2-7]+$"}
+  },
+  "additionalProperties": false
+}

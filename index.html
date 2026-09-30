@@ -1,0 +1,215 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#0b0d13" />
+    <link rel="manifest" href="manifest.webmanifest" />
+    <meta
+      name="description"
+      content="Sidelore is an open memory of unfinished research: failed attempts, evidence, and next paths."
+    />
+    <title>Sidelore — The open memory of unfinished research</title>
+    <link rel="stylesheet" href="styles.css" />
+    <script src="app.js" defer></script>
+  </head>
+  <body>
+    <div class="noise" aria-hidden="true"></div>
+    <div class="page-glow page-glow--one" aria-hidden="true"></div>
+    <div class="page-glow page-glow--two" aria-hidden="true"></div>
+
+    <header class="topbar">
+      <a class="brand" href="." aria-label="Sidelore home">
+        <span class="brand-mark" aria-hidden="true">
+          <svg viewBox="0 0 36 36" role="img">
+            <path d="M18 4v10m0 0-8 8m8-8 9 8M10 22v9m17-9v9" />
+            <circle cx="18" cy="4" r="2.5" />
+            <circle cx="10" cy="22" r="2.5" />
+            <circle cx="27" cy="22" r="2.5" />
+            <circle cx="10" cy="31" r="2" />
+            <circle cx="27" cy="31" r="2" />
+          </svg>
+        </span>
+        <span class="brand-name">sidelore</span>
+      </a>
+
+      <div class="topbar-meta">
+        <span class="status-dot"></span>
+        <span>local-first prototype</span>
+        <span class="topbar-divider"></span>
+        <span>synthetic field notes</span>
+        <button class="topbar-compose" id="openComposer" type="button">New trail <span>＋</span></button>
+      </div>
+    </header>
+
+    <main class="page-shell">
+      <section class="hero" aria-labelledby="page-title">
+        <div class="hero-copy">
+          <p class="eyebrow"><span>01</span> Research trails before the answer</p>
+          <h1 id="page-title">Keep the paths that <em>didn't</em> make the paper.</h1>
+          <p class="hero-lede">
+            Sidelore is a shared memory for hypotheses, dead ends, evidence, and the next question.
+            Read the route, not just the destination.
+          </p>
+          <div class="hero-actions">
+            <a class="button button--primary" href="#explorer">Explore the trails <span>↘</span></a>
+            <span class="hero-note">All records below are fictional.</span>
+          </div>
+        </div>
+
+        <div class="hero-visual" aria-label="A branching research trail diagram">
+          <div class="orbit orbit--outer"></div>
+          <div class="orbit orbit--inner"></div>
+          <div class="trail-line trail-line--main"></div>
+          <div class="trail-line trail-line--left"></div>
+          <div class="trail-line trail-line--right"></div>
+          <div class="trail-line trail-line--lower"></div>
+          <span class="trail-node trail-node--root"><i></i></span>
+          <span class="trail-node trail-node--left"><i></i></span>
+          <span class="trail-node trail-node--right"><i></i></span>
+          <span class="trail-node trail-node--lower"><i></i></span>
+          <span class="trail-label trail-label--root">question</span>
+          <span class="trail-label trail-label--left">failure</span>
+          <span class="trail-label trail-label--right">pivot</span>
+          <span class="trail-label trail-label--lower">next path</span>
+          <span class="visual-caption">a conclusion is one branch</span>
+        </div>
+      </section>
+
+      <section class="stats-grid" aria-label="Collection overview">
+        <div class="stat-card">
+          <span class="stat-label">Trails indexed</span>
+          <strong id="statTrails">—</strong>
+          <span class="stat-detail">portable research records</span>
+        </div>
+        <div class="stat-card">
+          <span class="stat-label">Domains</span>
+          <strong id="statDomains">—</strong>
+          <span class="stat-detail">cross-disciplinary by design</span>
+        </div>
+        <div class="stat-card stat-card--accent">
+          <span class="stat-label">Branches kept</span>
+          <strong id="statBranches">—</strong>
+          <span class="stat-detail">failures, pivots, open questions</span>
+        </div>
+        <div class="stat-card">
+          <span class="stat-label">Contributors</span>
+          <strong id="statContributors">—</strong>
+          <span class="stat-detail">people and agents</span>
+        </div>
+      </section>
+
+      <section class="explorer" id="explorer" aria-labelledby="explorer-title">
+        <div class="explorer-heading">
+          <div>
+            <p class="eyebrow"><span>02</span> The field notes</p>
+            <h2 id="explorer-title">Explore the unfinished layer</h2>
+          </div>
+          <p class="explorer-intro">
+            Each trail keeps its assumptions, evidence, and unresolved edges in view.
+          </p>
+        </div>
+
+        <div class="workspace">
+          <div class="list-column">
+            <div class="toolbar" role="search">
+              <label class="search-box">
+                <span class="sr-only">Search research trails</span>
+                <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="6.5"></circle><path d="m16 16 5 5"></path></svg>
+                <input id="searchInput" type="search" placeholder="Search trails, tags, people..." autocomplete="off" />
+              </label>
+              <label class="select-box">
+                <span class="sr-only">Filter by domain</span>
+                <select id="domainFilter">
+                  <option value="all">All domains</option>
+                </select>
+              </label>
+              <label class="select-box">
+                <span class="sr-only">Filter by outcome</span>
+                <select id="statusFilter">
+                  <option value="all">All outcomes</option>
+                  <option value="negative">Negative</option>
+                  <option value="unresolved">Unresolved</option>
+                  <option value="partial">Partial</option>
+                  <option value="reframed">Reframed</option>
+                </select>
+              </label>
+              <label class="select-box select-box--sort">
+                <span class="sr-only">Sort research trails</span>
+                <select id="sortSelect">
+                  <option value="recent">Recently updated</option>
+                  <option value="confidence">Highest confidence</option>
+                  <option value="branches">Most branches</option>
+                </select>
+              </label>
+              <button class="text-button" id="clearFilters" type="button">Reset</button>
+            </div>
+
+            <div class="results-bar">
+              <span id="resultsMeta">Loading trails...</span>
+              <span class="results-key"><i class="key-dot key-dot--warm"></i> unresolved edges are part of the record</span>
+            </div>
+
+            <div id="recordList" class="record-list" aria-live="polite" aria-busy="true"></div>
+          </div>
+
+          <aside class="detail-column" id="detailPanel" aria-live="polite">
+            <div class="detail-empty">
+              <div class="empty-mark">✦</div>
+              <p class="eyebrow">Select a trail</p>
+              <h3>Read the route behind the result.</h3>
+              <p>Choose a field note to see its timeline, evidence, and next paths.</p>
+            </div>
+          </aside>
+        </div>
+      </section>
+
+      <section class="composer-panel" id="composerPanel" aria-labelledby="composer-title" hidden>
+        <div class="composer-copy">
+          <p class="eyebrow"><span>04</span> Local composer</p>
+          <h2 id="composer-title">Keep the first attempt.</h2>
+          <p>Drafts are saved in this browser first. Nothing is published or sent to a node until you choose to do that.</p>
+          <p class="composer-status" id="composerStatus" role="status"></p>
+        </div>
+        <form class="composer-form" id="composerForm">
+          <label>Working title<input name="title" required maxlength="160" placeholder="What were you trying to find out?" /></label>
+          <label>Abstract<textarea name="abstract" rows="3" maxlength="800" placeholder="What happened, including the uncertainty?" ></textarea></label>
+          <div class="composer-row">
+            <label>Domain<input name="domain" maxlength="80" placeholder="e.g. agent systems" /></label>
+            <label>Tags<input name="tags" maxlength="180" placeholder="comma, separated, tags" /></label>
+          </div>
+          <div class="composer-actions"><button class="button button--primary" type="submit">Save local draft <span>↗</span></button><button class="text-button" id="exportDrafts" type="button">Export drafts</button><label class="text-button file-button">Import drafts<input id="importDrafts" type="file" accept="application/json" hidden /></label><button class="text-button" id="closeComposer" type="button">Close</button></div>
+        </form>
+      </section>
+
+      <section class="principles" aria-labelledby="principles-title">
+        <div>
+          <p class="eyebrow"><span>03</span> Why keep the trail?</p>
+          <h2 id="principles-title">A result without its route is hard to reuse.</h2>
+        </div>
+        <div class="principle-grid">
+          <article>
+            <span class="principle-number">01</span>
+            <h3>Make uncertainty legible</h3>
+            <p>Separate what was measured, inferred, abandoned, and left open.</p>
+          </article>
+          <article>
+            <span class="principle-number">02</span>
+            <h3>Let others fork earlier</h3>
+            <p>Give people and agents a starting point before the canonical answer.</p>
+          </article>
+          <article>
+            <span class="principle-number">03</span>
+            <h3>Keep provenance attached</h3>
+            <p>Carry evidence, assumptions, and custody with every portable record.</p>
+          </article>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-brand"><span class="brand-name">sidelore</span><span>·</span><span>alpha field notes</span></div>
+      <div class="footer-note">Built with fictional data for information-architecture research.</div>
+    </footer>
+  </body>
+</html>

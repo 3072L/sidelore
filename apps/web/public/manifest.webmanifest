@@ -1,0 +1,10 @@
+{
+  "name": "Sidelore — unfinished research",
+  "short_name": "Sidelore",
+  "description": "A local-first memory for research paths, failures, and next questions.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#101416",
+  "theme_color": "#101416",
+  "icons": []
+}

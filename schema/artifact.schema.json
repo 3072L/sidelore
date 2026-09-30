@@ -1,0 +1,23 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://sidelore.local/schema/artifact.schema.json",
+  "title": "Sidelore artifact metadata",
+  "type": "object",
+  "required": ["cid", "mediaType", "byteSize", "checksum", "encryptionMode"],
+  "properties": {
+    "cid": {"type": "string", "pattern": "^b[a-z2-7]+$"},
+    "mediaType": {"type": "string"},
+    "byteSize": {"type": "integer", "minimum": 0},
+    "checksum": {"type": "string"},
+    "encryptionMode": {"enum": ["none", "xchacha20-poly1305"]},
+    "nonce": {"type": "string"},
+    "authTag": {"type": "string"},
+    "keyEnvelope": {"type": "object"},
+    "license": {"type": "string"},
+    "retentionPolicy": {"enum": ["until_revoked", "expires", "local_only"]},
+    "expiresAt": {"type": "string", "format": "date-time"},
+    "sourceEventId": {"type": "string"}
+  },
+  "additionalProperties": false,
+  "allOf": [{"if": {"properties": {"retentionPolicy": {"const": "expires"}}}, "then": {"required": ["expiresAt"]}}]
+}

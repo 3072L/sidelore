@@ -1,0 +1,9 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "sidelore-sdk"
+version = "0.1.0"
+description = "Dependency-light client for Sidelore"
+requires-python = ">=3.9"

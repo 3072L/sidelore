@@ -1,0 +1,12 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://sidelore.local/schema/topic-review.schema.json",
+  "title": "Sidelore topic review",
+  "type": "object",
+  "required": ["reviewId", "topicId", "reviewerIdentityId", "status", "method", "result", "createdAt", "signature"],
+  "properties": {
+    "reviewId": {"type": "string", "minLength": 1}, "topicId": {"type": "string", "minLength": 1}, "subproblemId": {"type": "string", "minLength": 1}, "reviewerIdentityId": {"type": "string", "minLength": 1},
+    "status": {"enum": ["seen", "replicated", "partially_replicated", "challenged", "corrected", "not_reproducible", "withdrawn"]}, "method": {"type": "string", "minLength": 1}, "result": {"type": "string", "minLength": 1}, "createdAt": {"type": "string", "format": "date-time"}, "signature": {"type": "string", "minLength": 1}
+  },
+  "additionalProperties": false
+}

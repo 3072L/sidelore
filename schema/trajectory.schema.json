@@ -1,0 +1,59 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://sidelore.local/schema/trajectory.schema.json",
+  "title": "Sidelore research trajectory",
+  "description": "Portable representation of a research path, including failed and unresolved branches.",
+  "type": "object",
+  "required": ["id", "title", "domain", "status", "abstract", "timeline", "provenance"],
+  "properties": {
+    "id": {"type": "string", "minLength": 1},
+    "title": {"type": "string", "minLength": 1},
+    "subtitle": {"type": "string"},
+    "domain": {"type": "string", "minLength": 1},
+    "status": {"enum": ["negative", "unresolved", "partial", "reframed"]},
+    "visibility": {"enum": ["public", "federated", "private"]},
+    "confidence": {"type": "number", "minimum": 0, "maximum": 1},
+    "updated": {"type": "string", "format": "date"},
+    "contributors": {"type": "array", "items": {"type": "string"}},
+    "tags": {"type": "array", "items": {"type": "string"}},
+    "abstract": {"type": "string"},
+    "outcome": {"type": "string"},
+    "lesson": {"type": "string"},
+    "timeline": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "required": ["date", "type", "label", "note"],
+        "properties": {
+          "date": {"type": "string", "format": "date"},
+          "type": {"enum": ["hypothesis", "experiment", "failure", "pivot", "result", "open"]},
+          "label": {"type": "string"},
+          "note": {"type": "string"}
+        }
+      }
+    },
+    "evidence": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["kind", "label", "detail"],
+        "properties": {
+          "kind": {"type": "string"},
+          "label": {"type": "string"},
+          "detail": {"type": "string"}
+        }
+      }
+    },
+    "nextPaths": {"type": "array", "items": {"type": "string"}},
+    "provenance": {
+      "type": "object",
+      "required": ["authorType", "recordedBy"],
+      "properties": {
+        "authorType": {"type": "string"},
+        "recordedBy": {"type": "string"},
+        "license": {"type": "string"}
+      }
+    }
+  }
+}

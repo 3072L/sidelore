@@ -1,0 +1,17 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://sidelore.local/schema/topic.schema.json",
+  "title": "Sidelore research topic",
+  "type": "object",
+  "required": ["topicId", "question", "context", "domains", "tags", "successCriteria", "status", "visibility", "maintainers", "governancePolicy", "createdAt", "updatedAt", "createdBy", "contentCid", "signature"],
+  "properties": {
+    "topicId": {"type": "string", "minLength": 1}, "question": {"type": "string", "minLength": 1}, "context": {"type": "string"},
+    "domains": {"type": "array", "items": {"type": "string"}}, "tags": {"type": "array", "items": {"type": "string"}},
+    "successCriteria": {"type": "array", "items": {"type": "string"}}, "status": {"enum": ["open", "active", "blocked", "solved", "reopened", "retired"]}, "derivedStatus": {"enum": ["open", "active", "blocked", "solved", "reopened", "retired"]},
+    "visibility": {"enum": ["public", "federated", "private"]}, "maintainers": {"type": "array", "items": {"type": "string"}},
+    "governancePolicy": {"type": "object", "required": ["requiredSignatures"], "properties": {"requiredSignatures": {"type": "integer", "minimum": 1}, "allowedMembers": {"type": "array", "items": {"type": "string"}}}, "additionalProperties": false},
+    "createdAt": {"type": "string", "format": "date-time"}, "updatedAt": {"type": "string", "format": "date-time"}, "createdBy": {"type": "string"},
+    "contentCid": {"type": "string", "minLength": 1}, "signature": {"type": "string", "minLength": 1}
+  },
+  "additionalProperties": false
+}

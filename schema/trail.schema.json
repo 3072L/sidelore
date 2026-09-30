@@ -1,0 +1,32 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://sidelore.local/schema/trail.schema.json",
+  "title": "Sidelore research trail",
+  "type": "object",
+  "required": ["trailId", "title", "abstract", "domains", "tags", "headEventIds", "status", "initialStatus", "visibility", "contributors", "artifactManifest", "citationIndex", "reviewSummary", "provenance", "contentCid", "signature"],
+  "properties": {
+    "trailId": {"type": "string", "minLength": 1},
+    "title": {"type": "string", "minLength": 1},
+    "abstract": {"type": "string"},
+    "domains": {"type": "array", "items": {"type": "string"}},
+    "tags": {"type": "array", "items": {"type": "string"}},
+    "headEventIds": {"type": "array", "items": {"type": "string"}},
+    "status": {"enum": ["draft", "active", "negative", "unresolved", "partial", "reframed", "retracted"]},
+    "initialStatus": {"enum": ["draft", "active", "negative", "unresolved", "partial", "reframed", "retracted"]},
+    "visibility": {"enum": ["public", "federated", "private"]},
+    "contributors": {"type": "array", "items": {"type": "string"}},
+    "artifactManifest": {"type": "array", "items": {"$ref": "artifact.schema.json"}},
+    "citationIndex": {"type": "array", "items": {"type": "object", "properties": {"recordId": {"type": "string", "minLength": 1}, "eventId": {"type": "string", "minLength": 1}, "locator": {"type": "string"}, "quote": {"type": "string"}, "relation": {"enum": ["supports", "contradicts", "context", "derived_from"]}}, "anyOf": [{"required": ["recordId"]}, {"required": ["eventId"]}], "additionalProperties": false}},
+    "reviewSummary": {"type": "object", "additionalProperties": {"type": "integer", "minimum": 0}},
+    "provenance": {"type": "object", "required": ["authorIdentityId", "authorType", "recordedBy", "createdAt", "updatedAt"], "properties": {"authorIdentityId": {"type": "string"}, "authorType": {"enum": ["human", "agent", "synthetic"]}, "recordedBy": {"type": "string"}, "createdAt": {"type": "string", "format": "date-time"}, "updatedAt": {"type": "string", "format": "date-time"}, "signatureStatus": {"enum": ["valid", "invalid", "unverified"]}, "license": {"type": "string"}}, "additionalProperties": false},
+    "contentCid": {"type": "string", "pattern": "^b[a-z2-7]+$"},
+    "signature": {"type": "string", "minLength": 1},
+    "topicId": {"type": "string", "minLength": 1},
+    "subproblemId": {"type": "string", "minLength": 1},
+    "objective": {"type": "object", "required": ["question", "successCriteria", "constraints"], "properties": {"question": {"type": "string", "minLength": 1}, "successCriteria": {"type": "array", "items": {"type": "string"}}, "constraints": {"type": "array", "items": {"type": "string"}}}, "additionalProperties": false},
+    "verificationState": {"enum": ["author_claim", "unverified", "replicated", "challenged", "formally_verified", "withdrawn"]},
+    "derivedVerificationState": {"enum": ["author_claim", "unverified", "replicated", "challenged", "formally_verified", "withdrawn"]},
+    "verificationEvidenceIds": {"type": "array", "items": {"type": "string"}}
+  },
+  "additionalProperties": false
+}

@@ -1,0 +1,118 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://sidelore.local/schema/bundle.schema.json",
+  "title": "Sidelore portable bundle",
+  "type": "object",
+  "required": [
+    "format",
+    "version",
+    "exportedAt",
+    "identities",
+    "trails",
+    "events",
+    "artifacts",
+    "reviews",
+    "forks",
+    "tombstones"
+  ],
+  "properties": {
+    "format": {
+      "const": "sidelore.bundle"
+    },
+    "version": {
+      "const": 1
+    },
+    "exportedAt": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "identities": {
+      "type": "array",
+      "items": {
+        "type": "object"
+      }
+    },
+    "trails": {
+      "type": "array",
+      "items": {
+        "$ref": "trail.schema.json"
+      }
+    },
+    "events": {
+      "type": "array",
+      "items": {
+        "$ref": "event.schema.json"
+      }
+    },
+    "artifacts": {
+      "type": "array",
+      "items": {
+        "$ref": "artifact.schema.json"
+      }
+    },
+    "reviews": {
+      "type": "array",
+      "items": {
+        "type": "object"
+      }
+    },
+    "forks": {
+      "type": "array",
+      "items": {
+        "type": "object"
+      }
+    },
+    "tombstones": {
+      "type": "array",
+      "items": {
+        "type": "object"
+      }
+    },
+    "artifactData": {
+      "type": "object",
+      "additionalProperties": {
+        "type": "string"
+      }
+    },
+    "topics": {
+      "type": "array",
+      "items": {
+        "$ref": "topic.schema.json"
+      }
+    },
+    "subproblems": {
+      "type": "array",
+      "items": {
+        "$ref": "subproblem.schema.json"
+      }
+    },
+    "topicActivities": {
+      "type": "array",
+      "items": {
+        "$ref": "topic-activity.schema.json"
+      }
+    },
+    "topicReviews": {
+      "type": "array",
+      "items": {
+        "$ref": "topic-review.schema.json"
+      }
+    },
+    "membershipChanges": {
+      "type": "array",
+      "items": {
+        "type": "object"
+      }
+    },
+    "networkPolicy": {
+      "type": "object"
+    },
+    "publications": {
+      "type": "array",
+      "items": {
+        "$ref": "publication.schema.json"
+      }
+    }
+  },
+  "additionalProperties": false
+}

@@ -1,0 +1,12 @@
+{
+  "networkId": "sidelore-self-hosted-testnet",
+  "name": "Sidelore self hosted testnet",
+  "kind": "public",
+  "bootstrap": [],
+  "indexes": [],
+  "listen": ["/ip4/0.0.0.0/tcp/4001"],
+  "relayServer": true,
+  "autoConnect": true,
+  "cacheBytes": 1073741824,
+  "memberPeerIds": []
+}

@@ -1,0 +1,83 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://sidelore.local/schema/publication.schema.json",
+  "title": "Sidelore approved publication",
+  "type": "object",
+  "required": [
+    "snapshot",
+    "envelope",
+    "publisher"
+  ],
+  "properties": {
+    "snapshot": {
+      "type": "object",
+      "required": [
+        "protocol",
+        "networkId",
+        "topicId",
+        "bundle"
+      ],
+      "properties": {
+        "protocol": {
+          "const": "sidelore.publication/2"
+        },
+        "networkId": {
+          "type": "string",
+          "minLength": 1
+        },
+        "topicId": {
+          "type": "string",
+          "minLength": 1
+        },
+        "bundle": {
+          "$ref": "bundle.schema.json"
+        }
+      },
+      "additionalProperties": false
+    },
+    "envelope": {
+      "type": "object",
+      "required": [
+        "protocol",
+        "networkId",
+        "contentCid",
+        "publisherIdentityId",
+        "approvedAt",
+        "authorization",
+        "signature"
+      ],
+      "properties": {
+        "protocol": {
+          "const": "sidelore.publication/2"
+        },
+        "networkId": {
+          "type": "string"
+        },
+        "contentCid": {
+          "type": "string"
+        },
+        "publisherIdentityId": {
+          "type": "string"
+        },
+        "approvedAt": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "authorization": {
+          "enum": [
+            "human",
+            "grant"
+          ]
+        },
+        "signature": {
+          "type": "string"
+        }
+      },
+      "additionalProperties": false
+    },
+    "publisher": {
+      "type": "object"
+    }
+  },
+  "additionalProperties": false
+}

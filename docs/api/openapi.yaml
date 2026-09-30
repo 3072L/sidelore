@@ -1,0 +1,128 @@
+openapi: 3.1.0
+info:
+  title: Sidelore 2 Local and Public APIs
+  version: 0.2.0
+  description: |
+    Separate listeners: loopback local capability API (default 8787), optional
+    public read API (operator-selected port). Public reads use only approved
+    snapshots. v1 signed research records remain compatible. Old direct
+    publishing requires migration to prepare + approval.
+servers:
+  - url: http://127.0.0.1:8787
+    description: Local capability listener; public listener is separately configured
+paths:
+  /local:
+    post:
+      summary: Shared desktop, CLI and Agent service
+      security: [{LocalCapability: []}]
+      description: |
+        Loopback-only; browser Origins are rejected. An Agent token binds a
+        workspace. Human-only methods reject Agent credentials regardless of
+        supplied arguments. Desktop invokes the same service over isolated IPC.
+        Methods are documented in docs/agents.md and docs/protocol/README.md.
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              required: [method]
+              properties:
+                method:
+                  type: string
+                  enum: [identity.status, identity.initialize, identity.unlock, identity.lock, identity.migrate, identity.backup, identity.restore, workspace.list, workspace.create, network.list, network.save, network.status, network.search, network.connect, network.disconnect, network.sync, subscription.list, subscription.add, subscription.remove, research.list, research.topic, research.catalog, research.save, publication.prepare, publication.list, publication.approve, publication.cancel, publication.auto, grant.list, grant.create, grant.revoke, agent.create, agent.revoke, backup.export, backup.restore, bridge.enable, bridge.prepare, bridge.export, bridge.import, artifact.fetch]
+                args: {type: object}
+      responses:
+        '200': {description: Operation result; publication.auto may return pending with a review reason}
+        '400': {description: Invalid request or missing dependencies}
+        '401': {description: Missing local capability}
+        '403': {description: Untrusted local request}
+  /mcp:
+    post:
+      summary: Local scoped Agent MCP JSON-RPC endpoint
+      security: [{LocalCapability: []}]
+      responses:
+        '200': {description: MCP result; tool failures set isError}
+        '401': {description: Missing Agent capability}
+  /v1/health:
+    get:
+      responses:
+        '200': {description: Protocol v2, network ID and self-hosted-testnet release status}
+  /v1/topics:
+    get:
+      parameters:
+        - {name: q, in: query, schema: {type: string}}
+      responses:
+        '200': {description: Approved topics from this node only}
+        '403': {description: Isolated network or workspace query on public listener}
+  /v1/topics/{topicId}:
+    get:
+      parameters: [{name: topicId, in: path, required: true, schema: {type: string}}]
+      responses:
+        '200': {description: Approved topic, subproblems, attempts, activities and reviews}
+        '404': {description: No approved topic}
+  /v1/trails:
+    get:
+      parameters: [{name: q, in: query, schema: {type: string}}]
+      responses:
+        '200': {description: Approved trail projections only}
+    post:
+      deprecated: true
+      responses:
+        '409': {description: PUBLICATION_AUTHORIZATION_REQUIRED on local listener}
+        '404': {description: Local operation is absent from public listener}
+  /v1/trails/{trailId}:
+    get:
+      parameters: [{name: trailId, in: path, required: true, schema: {type: string}}]
+      responses:
+        '200': {description: Projection of approved signed records}
+        '404': {description: No approved record}
+  /v1/events/{eventId}:
+    get:
+      parameters: [{name: eventId, in: path, required: true, schema: {type: string}}]
+      responses:
+        '200': {description: Approved immutable event}
+        '404': {description: No approved event}
+  /v1/artifacts/{cid}:
+    get:
+      parameters: [{name: cid, in: path, required: true, schema: {type: string}}]
+      responses:
+        '200': {description: Approved bytes if cached; otherwise approved metadata}
+        '404': {description: No approved attachment}
+  /v1/directory/topics:
+    get:
+      parameters: [{name: q, in: query, schema: {type: string}}]
+      responses:
+        '200': {description: This index's approved topics and source node ID}
+        '403': {description: Directory is disabled}
+  /v2/publications:
+    get:
+      parameters:
+        - {name: topicId, in: query, required: true, schema: {type: string}}
+        - {name: after, in: query, schema: {type: integer, minimum: 0}}
+        - {name: limit, in: query, schema: {type: integer, minimum: 1, maximum: 200}}
+      responses:
+        '200': {description: CID entries, nextCursor, hasMore; cursor belongs to this node/topic}
+  /v2/publications/{cid}:
+    get:
+      parameters: [{name: cid, in: path, required: true, schema: {type: string}}]
+      responses:
+        '200': {description: Immutable snapshot, signed PublicationEnvelope and publisher identity}
+        '404': {description: Unapproved, cancelled, withdrawn or missing snapshot}
+  /v1/sync/manifest:
+    get:
+      responses:
+        '200': {description: Compatibility manifest derived only from approved content}
+  /v1/sync/content:
+    post:
+      responses:
+        '200': {description: Approved v2 snapshot bundle; snapshots keep all necessary approved dependencies}
+  /v1/export:
+    get:
+      responses:
+        '200': {description: Approved bundle with transferable publication envelopes; no drafts, keys, grants or memberships}
+components:
+  securitySchemes:
+    LocalCapability:
+      type: http
+      scheme: bearer

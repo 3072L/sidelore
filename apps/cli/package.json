@@ -1,0 +1,7 @@
+{
+  "name": "@sidelore/cli",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "bin": { "sidelore": "./dist/main.js" }
+}

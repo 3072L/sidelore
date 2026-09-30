@@ -1,0 +1,26 @@
+appId: org.sidelore.research
+productName: Sidelore
+directories:
+  output: release
+extraMetadata:
+  main: dist/apps/desktop/src/main.js
+files:
+  - dist/apps/desktop/**
+  - dist/apps/node/**
+  - dist/packages/**
+  - dist/web/**
+  - package.json
+  - '!**/test/**'
+  - '!**/*.map'
+asar: true
+mac:
+  target: [dmg, zip]
+  category: public.app-category.education
+win:
+  target: [nsis]
+linux:
+  target: [AppImage, deb]
+  category: Education
+nsis:
+  oneClick: false
+  allowToChangeInstallationDirectory: true

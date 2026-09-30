@@ -1,0 +1,14 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://sidelore.local/schema/subproblem.schema.json",
+  "title": "Sidelore research subproblem",
+  "type": "object",
+  "required": ["subproblemId", "topicId", "title", "statement", "constraints", "dependsOn", "status", "participantIds", "linkedTrailIds", "createdAt", "updatedAt", "createdBy", "contentCid", "signature"],
+  "properties": {
+    "subproblemId": {"type": "string", "minLength": 1}, "topicId": {"type": "string", "minLength": 1}, "title": {"type": "string", "minLength": 1}, "statement": {"type": "string", "minLength": 1},
+    "constraints": {"type": "array", "items": {"type": "string"}}, "dependsOn": {"type": "array", "items": {"type": "string"}},
+    "status": {"enum": ["open", "active", "blocked", "solved", "reopened"]}, "derivedStatus": {"enum": ["open", "active", "blocked", "solved", "reopened"]}, "participantIds": {"type": "array", "items": {"type": "string"}}, "linkedTrailIds": {"type": "array", "items": {"type": "string"}},
+    "createdAt": {"type": "string", "format": "date-time"}, "updatedAt": {"type": "string", "format": "date-time"}, "createdBy": {"type": "string"}, "contentCid": {"type": "string", "minLength": 1}, "signature": {"type": "string", "minLength": 1}
+  },
+  "additionalProperties": false
+}
