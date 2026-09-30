@@ -1,4 +1,4 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 900" role="img" aria-labelledby="title desc">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 900" role="img" aria-labelledby="title desc" shape-rendering="geometricPrecision" text-rendering="geometricPrecision" preserveAspectRatio="xMidYMid meet">
   <title id="title">Sidelore research branching loop</title>
   <desc id="desc">A topic becomes a precise subproblem, independent attempts produce results or failure evidence, reviews create corrections or new branches, and the work loops back to the next subproblem.</desc>
   <defs>
@@ -75,7 +75,7 @@
     <circle cx="680" cy="220" r="20" fill="#24516a" stroke="#83e8d6" stroke-width="2"/>
     <text x="680" y="226" text-anchor="middle" class="sans number">01</text>
     <text x="720" y="220" class="sans cardTitle">Precise subproblem</text>
-    <text x="680" y="260" class="sans cardText">Definitions · assumptions · criteria</text>
+    <text x="680" y="260" class="sans cardText">Definitions · assumptions · test</text>
     <text x="680" y="285" class="sans micro">Make the question inspectable</text>
   </g>
 
@@ -84,7 +84,7 @@
     <circle cx="125" cy="410" r="20" fill="#24516a" stroke="#83e8d6" stroke-width="2"/>
     <text x="125" y="416" text-anchor="middle" class="sans number">02</text>
     <text x="165" y="410" class="sans cardTitle">Independent attempt</text>
-    <text x="125" y="450" class="sans cardText">Proof · experiment · implementation</text>
+    <text x="125" y="450" class="sans cardText">Proof · experiment · code</text>
     <text x="125" y="475" class="sans micro">Different nodes can repeat the work</text>
   </g>
 
@@ -102,7 +102,7 @@
     <circle cx="680" cy="655" r="20" fill="#684456" stroke="#f0b56c" stroke-width="2"/>
     <text x="680" y="661" text-anchor="middle" class="sans number">03</text>
     <text x="720" y="655" class="sans cardTitle">Result / failure</text>
-    <text x="680" y="695" class="sans cardText">Evidence: what held · what broke</text>
+    <text x="680" y="695" class="sans cardText">Evidence: what held · what failed</text>
     <text x="680" y="720" class="sans micro">A failed lemma is still useful history</text>
   </g>
 
@@ -111,7 +111,7 @@
     <circle cx="1155" cy="655" r="20" fill="#594269" stroke="#f0b56c" stroke-width="2"/>
     <path d="M1147 655l6 6 11-13" fill="none" stroke="#ffe0a2" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
     <text x="1195" y="655" class="sans cardTitle">New branch</text>
-    <text x="1155" y="695" class="sans cardText">Correction · narrower question · pivot</text>
+    <text x="1155" y="695" class="sans cardText">Correction · narrower question</text>
     <text x="1155" y="720" class="sans micro">The next researcher has a map</text>
   </g>
 

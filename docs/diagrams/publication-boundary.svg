@@ -1,4 +1,4 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 900" role="img" aria-labelledby="title desc">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 900" role="img" aria-labelledby="title desc" shape-rendering="geometricPrecision" text-rendering="geometricPrecision" preserveAspectRatio="xMidYMid meet">
   <title id="title">Sidelore publication boundary</title>
   <desc id="desc">A local workspace is frozen into an immutable snapshot, reviewed and approved, then placed in an approved publication library before any P2P, HTTP, or index transport can see it.</desc>
   <defs>
@@ -71,7 +71,7 @@
     <text x="200" y="392" class="sans micro">only this node can read it</text>
     <text x="140" y="458" class="sans cardText">Drafts &amp; attempts</text>
     <text x="140" y="490" class="sans cardText">Private references</text>
-    <text x="140" y="522" class="sans cardText">Attachments &amp; filenames</text>
+    <text x="140" y="522" class="sans cardText">Attachments + filenames</text>
     <text x="140" y="554" class="sans micro">No transport access</text>
   </g>
 
@@ -104,12 +104,12 @@
     <rect filter="url(#shadow)" x="1195" y="315" width="285" height="270" rx="24" fill="url(#public)" stroke="#58bdb1" stroke-opacity="0.85"/>
     <circle cx="1245" cy="366" r="25" fill="#22565c" stroke="#8cefe0" stroke-width="2"/>
     <path d="M1233 366h24M1245 354v24M1237 358c6 5 10 5 16 0M1237 374c6-5 10-5 16 0" fill="none" stroke="#d2fff4" stroke-width="2" stroke-linecap="round"/>
-    <text x="1290" y="365" class="sans cardTitle">Publication library</text>
-    <text x="1290" y="392" class="sans micro">the only outward path</text>
+    <text x="1290" y="365" class="sans cardTitle">Public library</text>
+    <text x="1290" y="392" class="sans micro">outward path only</text>
     <text x="1230" y="458" class="sans cardText">Signed envelope + CID</text>
     <text x="1230" y="490" class="sans cardText">P2P / HTTP / indexes</text>
     <text x="1230" y="522" class="sans cardText">Remote verification</text>
-    <text x="1230" y="554" class="sans micro">Copies may remain after withdrawal</text>
+    <text x="1230" y="554" class="sans micro">Copies may outlive withdrawal</text>
   </g>
 
   <path d="M390 450H432" fill="none" stroke="#b9a9ff" stroke-width="4" marker-end="url(#arrow)"/>

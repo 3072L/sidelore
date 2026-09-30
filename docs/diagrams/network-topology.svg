@@ -1,4 +1,4 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 900" role="img" aria-labelledby="title desc">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 900" role="img" aria-labelledby="title desc" shape-rendering="geometricPrecision" text-rendering="geometricPrecision" preserveAspectRatio="xMidYMid meet">
   <title id="title">Sidelore decentralized network topology</title>
   <desc id="desc">Three participant nodes exchange signed snapshots over a peer mesh. Replaceable bootstrap and relay infrastructure helps discovery and connectivity. An optional public index exposes approved records only.</desc>
   <defs>
@@ -59,12 +59,12 @@
 
   <rect x="70" y="205" width="310" height="230" rx="22" fill="#0d1a2b" stroke="#35516a" stroke-opacity="0.85" filter="url(#shadow)"/>
   <rect x="70" y="205" width="7" height="230" rx="3.5" fill="url(#amber)"/>
-  <text x="100" y="247" class="sans kicker" fill="#f1b765">REPLACEABLE INFRASTRUCTURE</text>
+  <text x="100" y="247" class="sans kicker" fill="#f1b765">REPLACEABLE SERVICES</text>
   <text x="100" y="285" class="sans cardTitle">Bootstrap &amp; relay nodes</text>
   <text x="100" y="322" class="sans cardText">• discovery addresses</text>
   <text x="100" y="350" class="sans cardText">• Circuit Relay v2 / DCUtR</text>
   <text x="100" y="378" class="sans cardText">• optional content index</text>
-  <text x="100" y="411" class="sans micro">Helpful infrastructure, not ownership</text>
+  <text x="100" y="411" class="sans micro">Helpful layer, not the source of truth</text>
 
   <rect x="1220" y="205" width="310" height="230" rx="22" fill="#0d1a2b" stroke="#35516a" stroke-opacity="0.85" filter="url(#shadow)"/>
   <rect x="1220" y="205" width="7" height="230" rx="3.5" fill="url(#teal)"/>
@@ -73,7 +73,7 @@
   <text x="1250" y="322" class="sans cardText">• browse and search</text>
   <text x="1250" y="350" class="sans cardText">• approved records only</text>
   <text x="1250" y="378" class="sans cardText">• no vault or private keys</text>
-  <text x="1250" y="411" class="sans micro">An entry point, not the source of truth</text>
+  <text x="1250" y="411" class="sans micro">Entry point, not the source of truth</text>
 
   <rect x="420" y="190" width="700" height="570" rx="34" fill="url(#mesh)" stroke="#4c7188" stroke-opacity="0.75" filter="url(#shadow)"/>
   <text x="465" y="242" class="sans kicker">PARTICIPANT PEER MESH</text>
@@ -88,8 +88,8 @@
     <circle cx="535" cy="390" r="24" fill="#193f51" stroke="#64d8ca" stroke-width="2"/>
     <path d="M535 376v28M521 390h28" stroke="#9af1e5" stroke-width="3" stroke-linecap="round"/>
     <text x="575" y="390" class="sans nodeTitle">Node A</text>
-    <text x="575" y="418" class="sans nodeText">researcher · desktop</text>
-    <text x="575" y="445" class="sans micro">keeps identity + history</text>
+    <text x="575" y="418" class="sans nodeText">researcher</text>
+    <text x="575" y="445" class="sans micro">signed history</text>
   </g>
 
   <g>
@@ -97,8 +97,8 @@
     <circle cx="875" cy="390" r="24" fill="#193f51" stroke="#64d8ca" stroke-width="2"/>
     <path d="M865 390h20M875 380v20" stroke="#9af1e5" stroke-width="3" stroke-linecap="round"/>
     <text x="915" y="390" class="sans nodeTitle">Node B</text>
-    <text x="915" y="418" class="sans nodeText">Agent · headless</text>
-    <text x="915" y="445" class="sans micro">publishes within a grant</text>
+    <text x="915" y="418" class="sans nodeText">headless agent</text>
+    <text x="915" y="445" class="sans micro">bounded publishing</text>
   </g>
 
   <g>
@@ -107,12 +107,12 @@
     <path d="M699 605l8 8 15-17" fill="none" stroke="#9af1e5" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
     <text x="750" y="605" class="sans nodeTitle">Node C</text>
     <text x="750" y="633" class="sans nodeText">reviewer · CLI</text>
-    <text x="750" y="660" class="sans micro">replicates + challenges</text>
+    <text x="750" y="660" class="sans micro">replicates · reviews</text>
   </g>
 
   <rect x="648" y="492" width="244" height="52" rx="16" fill="#0b1726" stroke="#70dfd1" stroke-opacity="0.7"/>
   <text x="770" y="515" text-anchor="middle" class="sans kicker">NO CENTRAL AUTHORITY</text>
-  <text x="770" y="536" text-anchor="middle" class="sans micro">signed · content-addressed · branchable</text>
+  <text x="770" y="536" text-anchor="middle" class="sans micro">signed · CID-bound · branchable</text>
 
   <path d="M380 320C405 320 405 320 445 320" fill="none" stroke="#f1b765" stroke-width="2.5" stroke-dasharray="7 9" marker-end="url(#arrowAmber)"/>
   <path d="M1150 320C1180 320 1180 320 1220 320" fill="none" stroke="#64d8ca" stroke-width="2.5" stroke-dasharray="7 9" marker-end="url(#arrowTeal)"/>
