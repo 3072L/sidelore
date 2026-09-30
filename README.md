@@ -233,23 +233,7 @@ See [API](docs/api/openapi.yaml) and [Agent example](docs/agents.md).
 | `deploy` | Reusable self-hosted bootstrap/relay configuration; no live addresses or credentials. |
 | `research` | English research-topic proposals only; runtime research output is ignored. |
 
-## Source and privacy boundary
-
-The GitHub source repository is built from this Sidelore project directory only.
-It does not include parent directories or files from elsewhere on the computer.
-The reviewed history excludes runtime databases, identities, vaults, backups,
-attachments, datasets, logs, screenshots, verification output, dependencies,
-compiled artifacts, installers, browser profiles, credentials, and private keys.
-The source audit also checks staged blobs, commit authorship, machine paths,
-credential patterns, and non-placeholder email addresses. See the
-[source-only checklist](docs/source-publication.md) for the exact allowlist and
-limits of that review.
-
 ## Packaging and verification
-
-For GitHub source publication, follow the [source-only checklist](docs/source-publication.md).
-`npm run audit:source` checks the staged file contents and rejects files outside
-the source allowlist, symlinks, local state, and recognizable secret/path patterns.
 
 ```sh
 npm run test:desktop
@@ -260,9 +244,8 @@ npm run package:desktop
 Electron Builder has macOS DMG/ZIP, Windows NSIS and Linux AppImage/DEB targets.
 The manually triggered CI workflow builds each on its native OS. Signed releases
 require operator signing/notarization credentials. Test reports and screenshots
-are generated locally in the ignored `verification/` directory. Source releases
-contain no datasets, stored identities, research records, or verification output.
-See the [status document](docs/IMPLEMENTATION_STATUS.md) for remaining acceptance work.
+are generated locally in the ignored `verification/` directory. See the
+[status document](docs/IMPLEMENTATION_STATUS.md) for remaining acceptance work.
 
 Legacy research signatures remain unchanged. Old bundles and backups import
 locally without publication authority. Restore disconnects the network and
