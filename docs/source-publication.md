@@ -9,6 +9,7 @@ requires independent Git metadata inside that directory.
 - Application, package, and verification-script source.
 - English documentation and research proposals; localized UI resources and
   language tests retain the languages they implement.
+- Community health files such as `SECURITY.md` and `SUPPORT.md`.
 - Schemas, dependency manifests, lockfile, and reviewed deployment examples.
 - The web manifest and service worker, copied through an explicit asset list.
 

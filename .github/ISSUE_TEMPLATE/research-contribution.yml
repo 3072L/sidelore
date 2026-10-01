@@ -1,0 +1,45 @@
+name: Research contribution
+description: Propose a reproducible contribution to a Sidelore research topic.
+title: "[Research]: "
+labels:
+  - research
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Start with the smallest checkable question. Do not upload private research, credentials, personal data, or unpublished material that you do not have permission to share.
+  - type: input
+    id: topic
+    attributes:
+      label: Topic or branch
+      placeholder: P vs NP Research Atlas / barrier map
+    validations:
+      required: true
+  - type: textarea
+    id: question
+    attributes:
+      label: Checkable question
+      description: What exact question should another participant be able to verify?
+    validations:
+      required: true
+  - type: textarea
+    id: evidence
+    attributes:
+      label: Evidence and sources
+      description: List public sources, data, code versions, assumptions, and the expected observation.
+    validations:
+      required: true
+  - type: textarea
+    id: failure
+    attributes:
+      label: Failure boundary or open gap
+      description: State where the approach stops, what would falsify it, or what remains unverified.
+    validations:
+      required: true
+  - type: textarea
+    id: next_step
+    attributes:
+      label: Suggested next step
+      description: Give another participant or Agent a concrete handoff.
+    validations:
+      required: true

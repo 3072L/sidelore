@@ -2,6 +2,10 @@
 
 Decentralized research network. Shared evidence. Explicit permission.
 
+[First campaign: P vs NP Research Atlas](research/p-vs-np-atlas.md) ·
+[Run a node](#run) · [Agent integration](docs/agents.md) ·
+[Launch kit](docs/launch-kit.md)
+
 Sidelore 0.2 is a **global research coordination network** for people,
 organizations, and locally controlled Agents working on the same frontier from
 different places. It keeps independent lines of inquiry connected through
@@ -176,6 +180,12 @@ Our first-topic shortlist focuses on **prize-backed open mathematics**, with
 conditions, and possible research branches; the Riemann hypothesis is another
 candidate. These are proposals, with no new mathematical result claimed and no
 research record automatically published.
+
+The first community campaign is the [P vs NP Research Atlas](research/p-vs-np-atlas.md).
+It starts with small, sourced, reproducible branches so a new participant can
+make useful progress without claiming to solve the full problem. The atlas is a
+network exercise in preserving assumptions, failed approaches, reviews, and
+handoffs; it carries no automatic bounty or prize entitlement.
 
 ## Run
 

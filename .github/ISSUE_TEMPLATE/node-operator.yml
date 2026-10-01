@@ -1,0 +1,42 @@
+name: Node operator
+description: Offer or request a replaceable Sidelore bootstrap, relay, or index node.
+title: "[Node]: "
+labels:
+  - infrastructure
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Never include private keys, vault data, credentials, internal addresses, or organization research. Share only a public contact path and the information needed to coordinate a test node.
+  - type: dropdown
+    id: role
+    attributes:
+      label: Role
+      options:
+        - Bootstrap node
+        - Circuit Relay node
+        - Public index
+        - Household relay test participant
+        - I need help operating a node
+    validations:
+      required: true
+  - type: input
+    id: region
+    attributes:
+      label: Region or network perspective
+      description: Give a broad region or network type only; do not share a private address.
+      placeholder: Europe / home NAT / IPv6
+    validations:
+      required: true
+  - type: textarea
+    id: capacity
+    attributes:
+      label: Capacity and availability
+      description: Describe expected uptime, bandwidth, and the test window.
+    validations:
+      required: true
+  - type: textarea
+    id: notes
+    attributes:
+      label: Notes
+      description: Include the Sidelore version and any interoperability constraints.

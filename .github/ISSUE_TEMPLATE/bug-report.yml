@@ -1,0 +1,52 @@
+name: Bug report
+description: Report a reproducible problem in Sidelore.
+title: "[Bug]: "
+labels:
+  - bug
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Please remove private research, credentials, identities, network addresses, and local file paths before submitting.
+  - type: input
+    id: version
+    attributes:
+      label: Version or commit
+      description: Which release, commit, or local build did you use?
+      placeholder: v0.2.0 or 4d85172
+    validations:
+      required: true
+  - type: dropdown
+    id: surface
+    attributes:
+      label: Surface
+      options:
+        - Desktop
+        - Headless node
+        - CLI
+        - Web explorer
+        - SDK or MCP
+        - P2P sync
+        - Publication boundary
+    validations:
+      required: true
+  - type: textarea
+    id: reproduction
+    attributes:
+      label: Reproduction steps
+      description: Give the smallest safe sequence that reproduces the problem.
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected behavior
+    validations:
+      required: true
+  - type: textarea
+    id: actual
+    attributes:
+      label: Actual behavior and safe logs
+      description: Include sanitized output only. Never upload vaults, tokens, backups, private research, or machine paths.
+    validations:
+      required: true

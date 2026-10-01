@@ -1,0 +1,8 @@
+blank_issues_enabled: false
+contact_links:
+  - name: Ask a usage question
+    url: https://github.com/3072L/sidelore/discussions
+    about: Use Discussions for setup help, design questions, and research collaboration.
+  - name: Report a security vulnerability
+    url: https://github.com/3072L/sidelore/security/advisories/new
+    about: Use a private security advisory. Do not publish sensitive details in an issue.

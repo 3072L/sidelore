@@ -7,7 +7,7 @@ import { fileURLToPath } from "node:url";
 
 const rootFiles = new Set([
   ".gitignore", ".dockerignore", ".gitattributes", ".env.example", ".env.sample", ".env.template",
-  "README.md", "LICENSE", "CONTRIBUTING.md", "CODE_OF_CONDUCT.md",
+  "README.md", "LICENSE", "CONTRIBUTING.md", "CODE_OF_CONDUCT.md", "SECURITY.md", "SUPPORT.md",
   "package.json", "package-lock.json", "pnpm-workspace.yaml", "tsconfig.json",
   "electron-builder.yml", "config.example.json", "index.html", "app.js",
   "styles.css", "manifest.webmanifest", "service-worker.js",
