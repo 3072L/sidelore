@@ -10,7 +10,7 @@ and independently verified native releases remain external acceptance work.
 | Publication and migration | Separate approved snapshot library; immutable CID-bound preview; signed publication envelopes; private-dependency checks; manual approval; scoped grants with expiry, revocation, and durable quotas; encrypted identity backup and verified migration; restore disconnects and clears automatic authority |
 | Networking and sync | Persistent profiles, identity, peers, subscriptions, and cursors; replaceable bootstrap; Relay v2/DCUtR; scoped DHT; topic GossipSub hints; paginated content fetch, verification, deduplication, and retry; independent branches; cache limits; explicit attachment downloads; separate sent and receipt states |
 | UI and Agent access | Topics, subproblems, attempts, failure evidence, handoffs, and reviews; explicit subscriptions; frozen publication preview; workspace and identity management; TypeScript/Python clients; local MCP with restricted Agent capabilities |
-| Distribution | Electron desktop build targets for macOS, Windows, and Linux; headless CLI; manually triggered native-platform build workflow; Docker/Compose configuration |
+| Distribution | Electron desktop build targets for macOS, Windows, and Linux; headless CLI; tag-triggered native-platform prerelease workflow; Docker/Compose configuration |
 
 ## Reproducible checks
 

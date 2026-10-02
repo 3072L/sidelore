@@ -1,5 +1,13 @@
 name: Desktop build and verification
-on: [workflow_dispatch]
+on:
+  workflow_dispatch:
+  push:
+    tags:
+      - 'v*'
+
+permissions:
+  contents: write
+
 jobs:
   package:
     strategy:
@@ -20,10 +28,29 @@ jobs:
           CSC_IDENTITY_AUTO_DISCOVERY: false
       - uses: actions/upload-artifact@v4
         with:
-          name: sidelore-self-hosted-testnet-${{ matrix.os }}
+          name: sidelore-${{ matrix.os }}
+          if-no-files-found: error
           path: |
             release/*.dmg
             release/*.zip
             release/*.exe
             release/*.AppImage
             release/*.deb
+
+  release:
+    if: startsWith(github.ref, 'refs/tags/v')
+    needs: package
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/download-artifact@v4
+        with:
+          path: release
+          merge-multiple: true
+      - name: Publish GitHub prerelease
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          gh release create "$GITHUB_REF_NAME" release/* \
+            --prerelease \
+            --generate-notes \
+            --title "$GITHUB_REF_NAME (self-hosted testnet)"

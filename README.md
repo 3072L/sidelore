@@ -217,6 +217,11 @@ available. Otherwise it asks for a vault passphrase. Identity backups use a
 separately chosen passphrase so that OS-protected identities can be restored
 on another machine. Master keys are not exposed to the renderer, MCP or SDK.
 
+The latest desktop preview is available from the [GitHub Releases page](https://github.com/3072L/sidelore/releases).
+Preview builds are unsigned self-hosted testnet packages. Check the release
+notes and platform before installing; a release does not connect a node to a
+production network automatically.
+
 ## Publishing and connecting
 
 New records always remain local, including records with a legacy `public`
@@ -284,9 +289,10 @@ npm run package:desktop
 ```
 
 Electron Builder has macOS DMG/ZIP, Windows NSIS and Linux AppImage/DEB targets.
-The manually triggered CI workflow builds each on its native OS. Signed releases
-require operator signing/notarization credentials. Test reports and screenshots
-are generated locally in the ignored `verification/` directory. See the
+Pushing a `v*` tag runs the native build matrix and creates a GitHub prerelease;
+the workflow can also be run manually for verification artifacts. Signed
+releases require operator signing/notarization credentials. Test reports and
+screenshots are generated locally in the ignored `verification/` directory. See the
 [status document](docs/IMPLEMENTATION_STATUS.md) for remaining acceptance work.
 
 Legacy research signatures remain unchanged. Old bundles and backups import
