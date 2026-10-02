@@ -73,5 +73,8 @@
     "zod": "4.6.5"
   },
   "main": "dist/apps/desktop/src/main.js",
-  "author": "3072"
+  "author": {
+    "name": "3072",
+    "email": "3072@users.invalid"
+  }
 }
