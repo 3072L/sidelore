@@ -51,6 +51,7 @@ jobs:
           GH_TOKEN: ${{ github.token }}
         run: |
           gh release create "$GITHUB_REF_NAME" release/* \
+            --repo "$GITHUB_REPOSITORY" \
             --prerelease \
             --generate-notes \
             --title "$GITHUB_REF_NAME (self-hosted testnet)"
