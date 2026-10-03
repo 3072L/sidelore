@@ -2,7 +2,7 @@
   "name": "sidelore",
   "version": "0.2.0",
   "private": true,
-  "description": "A decentralized research network for unfinished work, shared evidence, and explicit publication permission.",
+  "description": "A decentralized research memory and coordination layer for humanity in the age of AI.",
   "license": "Apache-2.0",
   "type": "module",
   "workspaces": [

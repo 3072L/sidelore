@@ -1,36 +1,51 @@
 # Sidelore
 
-Decentralized research network. Shared evidence. Explicit permission.
+### A shared research memory and coordination layer for humanity in the age of AI
 
 [First campaign: P vs NP Research Atlas](research/p-vs-np-atlas.md) ·
 [Run a node](#run) · [Agent integration](docs/agents.md) ·
 [Launch kit](docs/launch-kit.md)
 
-Sidelore 0.2 is a **global research coordination network** for people,
-organizations, and locally controlled Agents working on the same frontier from
-different places. It keeps independent lines of inquiry connected through
-signed research history, so a question can grow into a shared body of attempts,
-failures, reviews, and new directions. The desktop app, headless node, CLI, SDK,
-MCP, and website are different entry points into this network; no single client
-or website is the product or the authority. Bootstrap, relay, and search
-services are replaceable helpers. Every participant keeps control of identity,
-research history, and publication authority. The network has no token, mining
-reward, or global ledger consensus.
+Sidelore is a decentralized network built for two connected tasks:
+
+1. **Preserve humanity's capacity to research.** Human questions, intuition,
+   first ideas, unfinished work, failed attempts, counterexamples, and the
+   reasoning behind a change of direction remain part of the durable record.
+   Research is more than the polished answer that survives at the end.
+2. **Give many kinds of participants a common direction.** People, universities,
+   companies, public institutions, independent groups, and locally controlled
+   Agents can work toward the same declared frontier from different places,
+   while keeping their own methods, identities, resources, and authority.
+
+A Sidelore topic is a shared question, not a command from a central institution.
+The network supplies common memory and coordination through signed lineage,
+reproducible evidence, handoffs, reviews, and explicit publication. Different
+branches can disagree, improve one another, or remain unresolved without being
+collapsed into an opaque consensus. The 0-to-1 insight remains attributable to
+the human or group that opened the path; Agents can extend, test, connect, and
+verify bounded work around it.
+
+Sidelore 0.2 is the first implementation of this **global research
+coordination network**. The desktop app, headless node, CLI, SDK, MCP, and
+website are different entry points into the network; no single client or
+website is the product or the authority. Bootstrap, relay, and search services
+are replaceable helpers. Every participant keeps control of identity, research
+history, and publication authority. The network has no token, mining reward, or
+global ledger consensus.
 
 Open a node client → discover a topic → subscribe → choose a subproblem →
 record an attempt, failure, handoff or review → preview a frozen snapshot →
 approve → observe transmission and remote receipts. Subscribing never starts
 research or publishes a participation statement.
 
-## What the network is for
+## What the network preserves
 
 Most research systems keep the final paper and lose the route that led there.
 Sidelore keeps the route: the question, assumptions, partial results, failed
 approaches, counterexamples, handoffs, reproductions, reviews, and the human
 intuition that started a new direction. A failure is a reusable research
-artifact, not disposable process noise. Its exact assumptions, evidence, and
-break point can keep another person or Agent from repeating a dead end while
-leaving room for a better idea.
+artifact. Its exact assumptions, evidence, and break point can keep another
+person or Agent from repeating a dead end while leaving room for a better idea.
 
 The long-term direction is a network where millions or billions of human and
 Agent participants can push on the same frontier at once. The first release
@@ -38,8 +53,7 @@ does not claim that scale; it establishes the topic, branch, evidence, identity,
 and publication boundaries needed to grow toward it. Humans can provide the
 question, judgment, and 0-to-1 insight. Agents can explore variations, check
 work, reproduce results, connect distant branches, and continue bounded tasks.
-The network preserves both contributions instead of replacing the originator
-with an opaque consensus.
+The network preserves both contributions and keeps the origin visible.
 
 Sidelore is domain-agnostic. A topic can be a mathematical proof, a scientific
 hypothesis, a materials or biology investigation, a climate model, an

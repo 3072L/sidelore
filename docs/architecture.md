@@ -1,5 +1,12 @@
 # Architecture
 
+Sidelore's architecture serves a human purpose before it serves a
+software purpose: preserve the full path of research and let many independent
+participants coordinate around one declared question. Shared direction comes
+from topic identity and signed lineage; local agency comes from separate
+workspaces, identities, permissions, and publication approval. A common
+frontier does not require a central owner or a single conclusion.
+
 The trusted Node.js core owns the encrypted identity vault, workspace SQLite
 store, immutable publication intents, bounded Agent grants and approved content
 library. `LocalResearchService` is shared by desktop IPC, the loopback HTTP

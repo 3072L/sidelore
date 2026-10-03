@@ -6,9 +6,10 @@ native releases become available.
 
 ## One-sentence description
 
-Sidelore is a decentralized research network where people, organizations, and
-locally controlled Agents can work on the same question, preserve failed paths,
-verify evidence, and publish only what they explicitly approve.
+Sidelore is a decentralized coordination layer for humanity's shared research
+memory: it preserves human 0-to-1 insight and lets people, organizations, and
+locally controlled Agents work toward the same frontier while keeping local
+authority.
 
 ## The first invitation
 
@@ -31,13 +32,21 @@ Clay prize.
 
 ## Ready-to-share English post
 
-**Show HN: Sidelore — a decentralized research network for humans and AI Agents**
+**Show HN: Sidelore — shared research memory and coordination for the AI age**
 
-Research tools usually preserve the final answer while losing the failed paths
-that explain how the answer was found. Sidelore connects independent research
-branches through signed records, evidence, handoffs, reproductions, and reviews.
-Humans keep publication authority; Agents can work through a bounded local
-interface; approved snapshots are the only content that leaves a node.
+AI can multiply search and execution. The risk is that humanity keeps the final
+answer while losing the question, the intuition, the failed paths, and the
+human 0-to-1 leap that made progress possible. Sidelore is a decentralized
+network for keeping that research memory alive and making it usable by the next
+person, organization, or Agent.
+
+A topic gives many independent participants one declared frontier. Universities,
+companies, public institutions, independent researchers, and locally controlled
+Agents can work on different branches, exchange evidence and handoffs, reproduce
+one another's work, and preserve disagreement without surrendering local
+authority. Humans retain judgment and publication control; Agents contribute
+bounded exploration, checking, connection, and repetition through a local
+interface.
 
 Our first community topic is a P vs NP Research Atlas: a sourced map of proof
 barriers, failed approaches, restricted-model results, and reproducible small
